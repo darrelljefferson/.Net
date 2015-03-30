@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="HayhouseWeeklyReportGenerator">
+</Property><Property Name="Solution File" Value="C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\HayhouseWeeklyReportGenerator\HayhouseWeeklyReportGenerator.sln">
+</Property><Property Name="Date" Value="Tuesday, July 05, 2011">
+</Property><Property Name="Time" Value="15:23:15 PM">
+</Property></Properties><Event ErrorLevel="0" Project="HayhouseWeeklyReportGenerator" Source="HayhouseWeeklyReportGenerator.csproj" Description="Project file successfully backed up as C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\HayhouseWeeklyReportGenerator\Backup\HayhouseWeeklyReportGenerator.csproj">
+</Event><Event ErrorLevel="0" Project="HayhouseWeeklyReportGenerator" Source="DataBuilder.cs" Description="File successfully backed up as C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\HayhouseWeeklyReportGenerator\Backup\DataBuilder.cs">
+</Event><Event ErrorLevel="0" Project="HayhouseWeeklyReportGenerator" Source="Log.cs" Description="File successfully backed up as C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\HayhouseWeeklyReportGenerator\Backup\Log.cs">
+</Event><Event ErrorLevel="0" Project="HayhouseWeeklyReportGenerator" Source="ParseMessageData.cs" Description="File successfully backed up as C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\HayhouseWeeklyReportGenerator\Backup\ParseMessageData.cs">
+</Event><Event ErrorLevel="0" Project="HayhouseWeeklyReportGenerator" Source="Program.cs" Description="File successfully backed up as C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\HayhouseWeeklyReportGenerator\Backup\Program.cs">
+</Event><Event ErrorLevel="0" Project="HayhouseWeeklyReportGenerator" Source="Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\HayhouseWeeklyReportGenerator\Backup\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="HayhouseWeeklyReportGenerator" Source="ReportBuilder.cs" Description="File successfully backed up as C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\HayhouseWeeklyReportGenerator\Backup\ReportBuilder.cs">
+</Event><Event ErrorLevel="0" Project="HayhouseWeeklyReportGenerator" Source="Reporting.cs" Description="File successfully backed up as C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\HayhouseWeeklyReportGenerator\Backup\Reporting.cs">
+</Event><Event ErrorLevel="0" Project="HayhouseWeeklyReportGenerator" Source="utility.cs" Description="File successfully backed up as C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\HayhouseWeeklyReportGenerator\Backup\utility.cs">
+</Event><Event ErrorLevel="0" Project="HayhouseWeeklyReportGenerator" Source="HayhouseWeeklyReportGenerator.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="HayhouseWeeklyReportGenerator" Source="HayhouseWeeklyReportGenerator.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="HayhouseWeeklyReportGenerator" Source="HayhouseWeeklyReportGenerator.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

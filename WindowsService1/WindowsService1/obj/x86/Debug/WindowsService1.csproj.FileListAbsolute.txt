@@ -1,0 +1,5 @@
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\WindowsService1\WindowsService1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\WindowsService1\WindowsService1\bin\Debug\WindowsService1.pdb
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\WindowsService1\WindowsService1\obj\x86\Debug\WindowsService1.exe
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\WindowsService1\WindowsService1\obj\x86\Debug\WindowsService1.pdb

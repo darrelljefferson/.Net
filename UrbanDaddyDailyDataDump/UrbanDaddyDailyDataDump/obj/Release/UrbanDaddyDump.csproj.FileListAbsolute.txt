@@ -1,0 +1,5 @@
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\UrbanDaddyDailyDataDump\UrbanDaddyDailyDataDump\bin\Release\UrbanDaddyDailyDataDump.exe
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\UrbanDaddyDailyDataDump\UrbanDaddyDailyDataDump\bin\Release\UrbanDaddyDailyDataDump.pdb
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\UrbanDaddyDailyDataDump\UrbanDaddyDailyDataDump\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\UrbanDaddyDailyDataDump\UrbanDaddyDailyDataDump\obj\Release\UrbanDaddyDailyDataDump.exe
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\UrbanDaddyDailyDataDump\UrbanDaddyDailyDataDump\obj\Release\UrbanDaddyDailyDataDump.pdb

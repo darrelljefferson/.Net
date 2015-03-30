@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<configuration>
+<configSections>
+</configSections>
+<connectionStrings>
+    <add name="MoneyMediaCSVParser.Properties.Settings.LyrisConnectionString"
+        connectionString="Data Source=DJEFFERSON-T61\LYRIS;Initial Catalog=Lyris;Integrated Security=True"
+        providerName="System.Data.SqlClient" />
+</connectionStrings>
+<startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup></configuration>

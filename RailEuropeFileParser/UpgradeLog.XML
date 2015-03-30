@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="RailEuropeFileParser">
+</Property><Property Name="Solution File" Value="C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\RailEuropeFileParser\RailEuropeFileParser.sln">
+</Property><Property Name="Date" Value="Tuesday, May 31, 2011">
+</Property><Property Name="Time" Value="17:37 PM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="RailEuropeFileParser.sln" Description="File successfully backed up as C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\RailEuropeFileParser\Backup\RailEuropeFileParser.sln">
+</Event><Event ErrorLevel="2" Project="RailEuropeFileParser" Source="RailEuropeFileParser\RailEuropeFileParser.csproj" Description="Unable to open project file to perform upgrade.  ">
+</Event><Event ErrorLevel="0" Project="" Source="RailEuropeFileParser.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="RailEuropeFileParser.sln" Description="Converted">
+</Event></UpgradeLog>

@@ -1,0 +1,8 @@
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\MDFApp\MDFApp\bin\Debug\Database1.mdf
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\MDFApp\MDFApp\bin\Debug\Database1_log.ldf
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\MDFApp\MDFApp\bin\Debug\MDFApp.exe.config
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\MDFApp\MDFApp\bin\Debug\MDFApp.exe
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\MDFApp\MDFApp\bin\Debug\MDFApp.pdb
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\MDFApp\MDFApp\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\MDFApp\MDFApp\obj\x86\Debug\MDFApp.exe
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\MDFApp\MDFApp\obj\x86\Debug\MDFApp.pdb

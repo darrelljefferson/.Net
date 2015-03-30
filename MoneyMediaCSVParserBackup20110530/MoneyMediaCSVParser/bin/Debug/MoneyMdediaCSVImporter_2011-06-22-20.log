@@ -1,0 +1,35 @@
+
+
+MoneyMedia Started at Wednesday, June 22, 2011 5:56:20 PM
+2011-06-22 17:56:20 - #-----------------------------------------------------------------------------
+2011-06-22 17:56:20 - #
+2011-06-22 17:56:20 - #
+2011-06-22 17:56:20 - #-----------------------------------------------------------------------------
+2011-06-22 17:56:20 - #DBNAME=lyris
+2011-06-22 17:56:20 - #HOST=DJEFFERSON-T61\LYRIS
+2011-06-22 17:56:20 - #USERID=CORP/Djefferson
+2011-06-22 17:56:20 - #PASSWORD=magnolia01
+2011-06-22 17:56:20 - # ----------------------------- Test Lyris ListManager Server ------------------------
+2011-06-22 17:56:20 - DBNAME=lm10xtest
+2011-06-22 17:56:20 - DBNAME=lm10xtest
+2011-06-22 17:56:20 - HOST=db18.hosting.lyris.net
+2011-06-22 17:56:20 - HOST=db18.hosting.lyris.net
+2011-06-22 17:56:20 - USERID=lm10xtest
+2011-06-22 17:56:20 - USERID=lm10xtest
+2011-06-22 17:56:20 - PASSWORD=lm10testytesty
+2011-06-22 17:56:20 - PASSWORD=lm10testytesty
+2011-06-22 17:56:20 - 
+2011-06-22 17:56:20 - 
+2011-06-22 17:56:20 - 
+2011-06-22 17:56:20 - 
+2011-06-22 17:56:20 - DIRPATH=c:\projects\moneymedia\data\
+2011-06-22 17:56:20 - DIRPATH=c:\projects\moneymedia\data\
+2011-06-22 17:56:20 - ERRPATH=c:\temp\
+2011-06-22 17:56:20 - ERRPATH=c:\temp\
+2011-06-22 17:56:20 - LOGPATH=c:\temp\
+2011-06-22 17:56:20 - LOGPATH=c:\temp\
+2011-06-22 17:56:20 - EXTENSION=csv
+2011-06-22 17:56:20 - EXTENSION=csv
+2011-06-22 17:56:20 - DUPSPATH=c:\temp\
+2011-06-22 17:56:20 - DUPSPATH=c:\temp\
+2011-06-22 17:56:20 - Processing: c:\projects\moneymedia\data\mm2.csv Size is 330946154

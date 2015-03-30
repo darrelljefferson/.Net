@@ -1,0 +1,18 @@
+[
+set test_trigger_content [segments::test_segment]
+if { [ncgi::value moderate_.EnableWysiwygEditor] == "T" } {
+return [htmltag::standard_header "" "[date_picker::head_script]\n[htmltag::wysiwyg_header]"]
+} else {
+return [htmltag::standard_header "" [date_picker::head_script]]
+}
+]
+
+
+
+[if { ![security::is_allowed_to_admin_this_subset_id [ncgi::value id [ncgi::value key_field_value 0]]] } { 
+    look::redirect_to_message_page "" "Sorry" "utilities" "[translation::text {You do not have permission to edit this segment:}] [ncgi::value id [ncgi::value key_field_value 0]]"
+}]
+
+$test_trigger_content
+
+[htmltag::standard_footer]

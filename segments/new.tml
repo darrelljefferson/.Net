@@ -1,0 +1,17 @@
+[ 
+    if {[segments::allow_segment_level] == 2} {
+       look::redirect_to_message_page "" "Sorry" "segments" "[translation::text {Only server administrators can create and edit segments}]"
+}]
+
+[htmltag::standard_header]
+
+<form action="new.tml?[lmcgi::clist_url]&sq=[ncgi::value sq]&viewtable_type=[ncgi::value viewtable_type]" method=post>
+[text::hidden_fields {QueryFieldHeight}]
+
+    [::segments::builder]
+    [look::dialogbox_buttons [subst {<input [translation::inputTagSubmitImage Save] name="save"> <input [translation::inputTagSubmitImage "Save and test"] name="save_test"> [translation::button_href "Cancel" [segments::getEndUrl "index.tml"]?viewtable_type=[ncgi::value viewtable_type]&sq=[ncgi::encode [ncgi::value sq ALL]] ]}]]
+	 <input type=hidden name="docs_.endUrl_" value="[ncgi::value docs_.endUrl_]">
+</form>
+
+[htmltag::standard_footer]
+

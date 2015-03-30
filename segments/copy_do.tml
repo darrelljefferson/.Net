@@ -1,0 +1,7 @@
+[if { ![security::is_allowed_to_admin_this_subset_id [ncgi::value id [ncgi::value key_field_value 0]]] } { 
+    look::redirect_to_message_page "" "Sorry" "utilities" "[translation::text {You do not have permission to edit this segment:}] [ncgi::value id [ncgi::value key_field_value 0]]"
+}]
+[
+segments::page_copy_do
+look::message_page "/segments/" [translation::text "Segment Copied"] "segments"
+]

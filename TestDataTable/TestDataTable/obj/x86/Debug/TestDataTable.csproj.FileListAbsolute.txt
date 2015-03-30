@@ -1,0 +1,5 @@
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\TestDataTable\TestDataTable\bin\Debug\TestDataTable.exe
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\TestDataTable\TestDataTable\bin\Debug\TestDataTable.pdb
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\TestDataTable\TestDataTable\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\TestDataTable\TestDataTable\obj\x86\Debug\TestDataTable.exe
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\TestDataTable\TestDataTable\obj\x86\Debug\TestDataTable.pdb

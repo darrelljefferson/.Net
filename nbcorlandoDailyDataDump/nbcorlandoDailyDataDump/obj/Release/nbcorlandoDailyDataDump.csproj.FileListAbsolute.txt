@@ -1,0 +1,5 @@
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\nbcorlandoDailyDataDump\nbcorlandoDailyDataDump\obj\Release\nbcorlandoDailyDataDump.exe
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\nbcorlandoDailyDataDump\nbcorlandoDailyDataDump\obj\Release\nbcorlandoDailyDataDump.pdb
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\nbcorlandoDailyDataDump\nbcorlandoDailyDataDump\bin\Release\nbcorlandoDailyDataDump.exe
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\nbcorlandoDailyDataDump\nbcorlandoDailyDataDump\bin\Release\nbcorlandoDailyDataDump.pdb
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\nbcorlandoDailyDataDump\nbcorlandoDailyDataDump\obj\Release\ResolveAssemblyReference.cache

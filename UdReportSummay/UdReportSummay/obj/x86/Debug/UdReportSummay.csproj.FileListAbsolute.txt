@@ -1,0 +1,5 @@
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\UdReportSummay\UdReportSummay\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\UdReportSummay\UdReportSummay\bin\Debug\UdReportSummay.exe
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\UdReportSummay\UdReportSummay\bin\Debug\UdReportSummay.pdb
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\UdReportSummay\UdReportSummay\obj\x86\Debug\UdReportSummay.exe
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\UdReportSummay\UdReportSummay\obj\x86\Debug\UdReportSummay.pdb

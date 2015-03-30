@@ -1,0 +1,11 @@
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\HayhouseWeeklyReportGenerator\HayhouseWeeklyReportGenerator\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\HayhouseWeeklyReportGenerator\HayhouseWeeklyReportGenerator\bin\Debug\HayhouseWeeklyReportGenerator.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\HayhouseWeeklyReportGenerator\HayhouseWeeklyReportGenerator\bin\Debug\HayhouseWeeklyReportGenerator.pdb
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\HayhouseWeeklyReportGenerator\HayhouseWeeklyReportGenerator\obj\Debug\HayhouseWeeklyReportGenerator.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\HayhouseWeeklyReportGenerator\HayhouseWeeklyReportGenerator\obj\Debug\HayhouseWeeklyReportGenerator.pdb
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\HayhouseWeeklyReportGenerator\HayhouseWeeklyReportGenerator\bin\Debug\ChilkatDotNet2.dll
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\HayhouseWeeklyReportGenerator\obj\Debug\HayhouseWeeklyReportGenerator.exe
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\HayhouseWeeklyReportGenerator\obj\Debug\HayhouseWeeklyReportGenerator.pdb
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\HayhouseWeeklyReportGenerator\bin\Debug\HayhouseWeeklyReportGenerator.exe
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\HayhouseWeeklyReportGenerator\bin\Debug\HayhouseWeeklyReportGenerator.pdb
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\HayhouseWeeklyReportGenerator\obj\Debug\ResolveAssemblyReference.cache

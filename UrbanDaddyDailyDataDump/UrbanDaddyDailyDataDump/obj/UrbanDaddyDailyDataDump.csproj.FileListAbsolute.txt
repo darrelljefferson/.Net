@@ -1,0 +1,12 @@
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\UrbanDaddyDailyDataDump\UrbanDaddyDailyDataDump\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\UrbanDaddyDailyDataDump\UrbanDaddyDailyDataDump\bin\Debug\UrbanDaddyDailyDataDump.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\UrbanDaddyDailyDataDump\UrbanDaddyDailyDataDump\bin\Debug\UrbanDaddyDailyDataDump.pdb
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\UrbanDaddyDailyDataDump\UrbanDaddyDailyDataDump\obj\Debug\UrbanDaddyDailyDataDump.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\UrbanDaddyDailyDataDump\UrbanDaddyDailyDataDump\obj\Debug\UrbanDaddyDailyDataDump.pdb
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\UrbanDaddyDailyDataDump\UrbanDaddyDailyDataDump\bin\Debug\ChilkatDotNet2.dll
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\UrbanDaddyDailyDataDump\UrbanDaddyDailyDataDump\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\UrbanDaddyDailyDataDump\UrbanDaddyDailyDataDump\bin\Release\UrbanDaddyDailyDataDump.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\UrbanDaddyDailyDataDump\UrbanDaddyDailyDataDump\bin\Release\UrbanDaddyDailyDataDump.pdb
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\UrbanDaddyDailyDataDump\UrbanDaddyDailyDataDump\bin\Release\ChilkatDotNet2.dll
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\UrbanDaddyDailyDataDump\UrbanDaddyDailyDataDump\obj\Release\UrbanDaddyDailyDataDump.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\UrbanDaddyDailyDataDump\UrbanDaddyDailyDataDump\obj\Release\UrbanDaddyDailyDataDump.pdb

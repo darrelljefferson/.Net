@@ -1,0 +1,8 @@
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\API\Lyris_Listmanager_SOAP_API_Tests\bin\Release\Lyris Listmanager SOAP API Tests.exe.config
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\API\Lyris_Listmanager_SOAP_API_Tests\bin\Release\Lyris Listmanager SOAP API Tests.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\API\Lyris_Listmanager_SOAP_API_Tests\bin\Release\Lyris Listmanager SOAP API Tests.XmlSerializers.dll
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\API\Lyris_Listmanager_SOAP_API_Tests\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\API\Lyris_Listmanager_SOAP_API_Tests\obj\Release\Lyris_Listmanager_SOAP_API_Tests.Form1.resources
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\API\Lyris_Listmanager_SOAP_API_Tests\obj\Release\Lyris Listmanager SOAP API Tests.csproj.GenerateResource.Cache
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\API\Lyris_Listmanager_SOAP_API_Tests\obj\Release\Lyris Listmanager SOAP API Tests.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\API\Lyris_Listmanager_SOAP_API_Tests\obj\Release\Lyris Listmanager SOAP API Tests.XmlSerializers.dll

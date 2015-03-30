@@ -1,0 +1,134 @@
+[htmltag::standard_header]
+[
+	proc index_function_url {} {
+		return [security::vtable_function_url segments::page_index segments segmentstable]
+	}
+]
+[look::bread_crumbs "" 1 [lmcgi::page_url] "" "segmentstable" "[index_function_url]" "viewsegments.html?cnts.htm?~noresize~" "1" 1]
+[scripts::updatebuttons]
+
+<script>
+function updateButtons(option,sq,current_list) {
+    var vobnewSegment = document.getElementById('newSegment');
+    if (vobnewSegment) {
+        vobnewSegment.href="new.tml?sq=" + sq + "&viewtable_type=" + option + "&current_list=" + current_list;
+    }
+
+    var vobnewTriggered = document.getElementById('newTriggered');
+    if (vobnewTriggered) {
+        vobnewTriggered.href="new_triggered.tml?sq=" + sq + "&viewtable_type=" + option + "&current_list=" + current_list;
+    }
+
+}
+function updateType(option) {
+    var vobnewSegment = document.getElementById('newSegment');
+    if (vobnewSegment) {
+        var hreflink=new String(vobnewSegment.href);
+        newhreflink=hreflink.substring(0,hreflink.indexOf('&view')) + '&viewtable_type=' + option + hreflink.substring(hreflink.indexOf('&cu'));
+        vobnewSegment.href=newhreflink;
+    }
+
+    var vobnewTriggered = document.getElementById('newTriggered');
+    if (vobnewTriggered) {
+        var hreflink=new String(vobnewTriggered.href);
+        newhreflink=hreflink.substring(0,hreflink.indexOf('&view')) + '&viewtable_type=' + option + hreflink.substring(hreflink.indexOf('&cu'));
+        vobnewTriggered.href=newhreflink;
+    }
+
+}
+</script>
+
+<form>
+[
+    if {[ncgi::value sb]==1} {
+        set sel "ALL"
+        lmcgi::set_cookie segmentstable sq ALL
+        lmcgi::set_cookie segmentstable viewtable_type all
+    } else {
+        set sel [ncgi::value sq]
+        if {$sel==""} {
+            set sel "ALL"
+        }
+        lmcgi::define_cookie segmentstable sq $sel
+        lmcgi::define_cookie segmentstable viewtable_type [ncgi::value viewtable_type]
+    }
+]
+
+[look::dialogbox_below_titlebox_begin]
+<td valign="middle" valign="left">
+[
+	set segment_level [segments::allow_segment_level]
+
+proc display_dropdown {} {
+   return "<SELECT id=\"go\" name=\"go\" class=\"forminput\" size=\"1\" onchange=\"viewtable.location.href=this.options\[selectedIndex\].value;updateType(document.getElementById('go').options\[document.getElementById('go').selectedIndex\].id);\">
+                                                            <option id=\"all\" value='[index_function_url]&viewtable_type=all&skip=0'>[translation::text All]</option>
+                                                            <option id=\"nontriggered\" value='[index_function_url]&viewtable_type=nontriggered&skip=0' >[translation::text Standard]</option>
+                                                            <option id=\"triggered\" value='[index_function_url]&viewtable_type=triggered&skip=0'>[translation::text Triggered]</option>
+                                                    </select> 
+   <script>document.getElementById('[ncgi::value viewtable_type all]').selected=true;</script>
+   "
+}
+
+	if {[security::triggered_mailings_allowed] == "1" && $segment_level != 2 } {
+			return [display_dropdown]
+	} else {
+			return ""
+	}
+]
+</td>
+<td align="right" valign="middle">
+[
+	if {[security::triggered_mailings_allowed] == "1" && $segment_level != 2 } {
+		translation::button_href "Create New Triggered Segment" "new_triggered.tml?sq=[ncgi::encode $sel]&viewtable_type=[ncgi::value viewtable_type]" "id=\"newTriggered\" name=\"newTriggered\""
+	} else {
+        return ""
+    }
+]
+[
+    if { $segment_level != 2 } {
+        return [translation::button_href "Create New Segment" "new.tml?sq=[ncgi::encode $sel]&viewtable_type=[ncgi::value viewtable_type]" "id=\"newSegment\" name=\"newSegment\""]
+    } else {
+        return "<FONT SIZE=\"2\"><I>Note: Only server administrators can create and edit segments.</I></FONT>"
+    }
+]
+</td>
+<input type="hidden" name="viewtable_type" value="[ncgi::value viewtable_type]">
+<input type="hidden" name="sq" value="$sel">
+
+[look::dialogbox_below_titlebox_end]
+<div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
+<script type="text/javascript" src="/js/overLIB/overlib.js"><!-- overLIB (c) Erik Bosrup --></script>
+
+
+
+[
+    set DisplayList [list ALL A B C D E F G H I J K L M N O P Q R S T U V W X Y Z # $]
+    set DisplayAlt [list All A B C D E F G H I J K L M N O P Q R S T U V W X Y Z "Numeric search" "Non-alpha-numric search"]
+    set html {<style>
+        .sccontent_rolodex {
+                padding:5px; FONT-SIZE:10px; FONT-WEIGHT:bold; TEXT-DECORATION: none;
+        }
+        .sccontent_rolodex_alt {
+                padding:5px; color:#ffffff; FONT-SIZE:10px; FONT-WEIGHT:bold; BACKGROUND:#CACACA; TEXT-DECORATION: none;
+        }
+        </style>
+    }
+
+    append html {
+      <table cellSpacing="0" cellPadding="0" width="100%" align="center" border="0">
+        <tbody>
+          <TR width="100%" style="padding:5px;">}
+    for {set x 0} {$x<29} {incr x} { 
+        append html "<TD id=\"[lindex $DisplayList $x]_id\" name=\"[lindex $DisplayList $x]_id\"><A class=sccontent_rolodex onclick=\"updateButtons(document.getElementById('go').options\[document.getElementById('go').selectedIndex\].id,\'[lindex $DisplayList $x]\',\'[security::current_list]\');\"  onmouseover=\"this.className='sccontent_rolodex_alt';overlib(\'[lindex $DisplayAlt $x]\',WIDTH,5,WRAP);\" onmouseout=\"this.className='sccontent_rolodex';return nd();\" href=\"[security::vtable_function_url segments::page_index segments segmentstable]&q=[ncgi::value q]&sq=[ncgi::encode [lindex $DisplayList $x]]&skip=0\" target=\"viewtable\">[lindex $DisplayList $x]</A></TD>"
+    }
+    append html "</tr></tbody></table>"
+    return $html
+]
+
+
+[look::viewtable_iframe_buttons_script "Segments" segmentstable "[index_function_url]"]
+
+</form>
+
+
+[htmltag::standard_footer]

@@ -1,0 +1,10 @@
+[htmltag::standard_header]
+
+<form action="new_triggered.tml?[lmcgi::clist_url]" method=post>
+    [::segments::builder 1]
+    [look::dialogbox_buttons [subst {<input [translation::inputTagSubmitImage Save] name="save"> <input [translation::inputTagSubmitImage "Save and test"] name="save_test"> [translation::button_href "Cancel" "index.tml?viewtable_type=[ncgi::value viewtable_type]&sq=[ncgi::encode [ncgi::value sq ALL]]"]}]]
+[text::hidden_fields {QueryFieldHeight sq viewtable_type}]
+</form>
+
+[htmltag::standard_footer]
+

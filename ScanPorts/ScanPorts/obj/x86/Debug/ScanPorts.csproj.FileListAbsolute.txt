@@ -1,0 +1,5 @@
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\ScanPorts\ScanPorts\bin\Debug\ScanPorts.exe
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\ScanPorts\ScanPorts\bin\Debug\ScanPorts.pdb
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\ScanPorts\ScanPorts\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\ScanPorts\ScanPorts\obj\x86\Debug\ScanPorts.exe
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\ScanPorts\ScanPorts\obj\x86\Debug\ScanPorts.pdb

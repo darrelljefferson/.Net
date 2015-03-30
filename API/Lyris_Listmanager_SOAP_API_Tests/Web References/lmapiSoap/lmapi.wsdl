@@ -1,0 +1,2153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WSDL:definitions xmlns:MIME="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:SOAP="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns="http://www.lyris.com/lmapi" xmlns:DIME="http://schemas.xmlsoap.org/ws/2002/04/dime/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://tempuri.org/ns1.xsd" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://www.lyris.com/lmapi" xmlns="http://schemas.xmlsoap.org/wsdl/" name="lmapi" targetNamespace="http://www.lyris.com/lmapi" xmlns:WSDL="http://schemas.xmlsoap.org/wsdl/">
+  <WSDL:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:ns="http://www.lyris.com/lmapi" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://tempuri.org/ns1.xsd">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:simpleType name="LicenseLevelEnum">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="S" />
+          <xsd:enumeration value="P" />
+          <xsd:enumeration value="E" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="ListTypeEnum">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="marketing" />
+          <xsd:enumeration value="announcement-moderated" />
+          <xsd:enumeration value="discussion-moderated" />
+          <xsd:enumeration value="discussion-unmoderated" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="MriVisibilityEnum">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="V" />
+          <xsd:enumeration value="H" />
+          <xsd:enumeration value="I" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="MemberStatusEnum">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="normal" />
+          <xsd:enumeration value="member" />
+          <xsd:enumeration value="confirm" />
+          <xsd:enumeration value="confirm-failed" />
+          <xsd:enumeration value="private" />
+          <xsd:enumeration value="expired" />
+          <xsd:enumeration value="held" />
+          <xsd:enumeration value="unsub" />
+          <xsd:enumeration value="referred" />
+          <xsd:enumeration value="needs-confirm" />
+          <xsd:enumeration value="needs-hello" />
+          <xsd:enumeration value="needs-goodbye" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="MessageTypeEnum">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="confirm" />
+          <xsd:enumeration value="hello" />
+          <xsd:enumeration value="goodbye" />
+          <xsd:enumeration value="held" />
+          <xsd:enumeration value="private" />
+          <xsd:enumeration value="delivery" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="ModeratedEnum">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="no" />
+          <xsd:enumeration value="all" />
+          <xsd:enumeration value="number" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="ConferenceVisibilityEnum">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="D" />
+          <xsd:enumeration value="M" />
+          <xsd:enumeration value="E" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="ConferencePostEnum">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="A" />
+          <xsd:enumeration value="M" />
+          <xsd:enumeration value="E" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="ConferenceDurationEnum">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="1" />
+          <xsd:enumeration value="2" />
+          <xsd:enumeration value="3" />
+          <xsd:enumeration value="4" />
+          <xsd:enumeration value="6" />
+          <xsd:enumeration value="10" />
+          <xsd:enumeration value="12" />
+          <xsd:enumeration value="24" />
+          <xsd:enumeration value="48" />
+          <xsd:enumeration value="72" />
+          <xsd:enumeration value="96" />
+          <xsd:enumeration value="120" />
+          <xsd:enumeration value="144" />
+          <xsd:enumeration value="168" />
+          <xsd:enumeration value="192" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="ConfirmUnsubEnum">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="0" />
+          <xsd:enumeration value="1" />
+          <xsd:enumeration value="2" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="PasswordRequiredEnum">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="0" />
+          <xsd:enumeration value="1" />
+          <xsd:enumeration value="2" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="MemberListSecurityEnum">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="0" />
+          <xsd:enumeration value="1" />
+          <xsd:enumeration value="2" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="RecencyOperatorEnum">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="m" />
+          <xsd:enumeration value="f" />
+          <xsd:enumeration value="e" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="MemberKindEnum">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="digest" />
+          <xsd:enumeration value="daymimedigest" />
+          <xsd:enumeration value="mimedigest" />
+          <xsd:enumeration value="index" />
+          <xsd:enumeration value="nomail" />
+          <xsd:enumeration value="mail" />
+          <xsd:enumeration value="expired" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="NewSubscriberPolicyEnum">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="open" />
+          <xsd:enumeration value="private" />
+          <xsd:enumeration value="closed" />
+          <xsd:enumeration value="password" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="BanLogicEnum">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="A" />
+          <xsd:enumeration value="C" />
+          <xsd:enumeration value="R" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="PostPasswordEnum">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="0" />
+          <xsd:enumeration value="1" />
+          <xsd:enumeration value="2" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="NameRequiredEnum">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="0" />
+          <xsd:enumeration value="2" />
+          <xsd:enumeration value="1" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="ScriptingLevelEnum">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="0" />
+          <xsd:enumeration value="1" />
+          <xsd:enumeration value="2" />
+          <xsd:enumeration value="3" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="SegmentTypeEnum">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="normal" />
+          <xsd:enumeration value="triggered" />
+          <xsd:enumeration value="sequential" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="LoggingLevelEnum">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="N" />
+          <xsd:enumeration value="M" />
+          <xsd:enumeration value="E" />
+          <xsd:enumeration value="F" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="AddHeadersAndFootersEnum">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="N" />
+          <xsd:enumeration value="A" />
+          <xsd:enumeration value="I" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="DocTypeEnum">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="BILLING" />
+          <xsd:enumeration value="CONTENTv2" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="EnableScriptingEnum">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="0" />
+          <xsd:enumeration value="1" />
+          <xsd:enumeration value="2" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="RecencyWhichEnum">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="m" />
+          <xsd:enumeration value="l" />
+          <xsd:enumeration value="e" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="MailFormatEnum">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="T" />
+          <xsd:enumeration value="H" />
+          <xsd:enumeration value="M" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="MailSectionEncodingEnum">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="8bit" />
+          <xsd:enumeration value="quoted-printable" />
+          <xsd:enumeration value="base64" />
+          <xsd:enumeration value="7bit" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="FieldTypeEnum">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="integer" />
+          <xsd:enumeration value="date" />
+          <xsd:enumeration value="char1" />
+          <xsd:enumeration value="char2" />
+          <xsd:enumeration value="char3" />
+          <xsd:enumeration value="varchar5" />
+          <xsd:enumeration value="varchar10" />
+          <xsd:enumeration value="varchar20" />
+          <xsd:enumeration value="varchar30" />
+          <xsd:enumeration value="varchar40" />
+          <xsd:enumeration value="varchar50" />
+          <xsd:enumeration value="varchar60" />
+          <xsd:enumeration value="varchar70" />
+          <xsd:enumeration value="varchar80" />
+          <xsd:enumeration value="varchar90" />
+          <xsd:enumeration value="varchar100" />
+          <xsd:enumeration value="varchar150" />
+          <xsd:enumeration value="varchar200" />
+          <xsd:enumeration value="varchar250" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="SimpleMailingStruct">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="Subject" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="IsHtmlSectionEncoded" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="HtmlSectionEncoding" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="HtmlMessage" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="To" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="CharSetID" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="IsTextSectionEncoded" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="TextSectionEncoding" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Title" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="TextMessage" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Attachments" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="From" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="AdditionalHeaders" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="MessageStruct">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="RecipientEmailsIn" nillable="true" type="tns:ArrayOfstring" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="RecipientMemberIDsIn" nillable="true" type="tns:ArrayOfint" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="HeadersIn" nillable="true" type="tns:ArrayOfKeyValueType" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Body" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="SegmentID" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ListName" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DocPart">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="Body" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="MimePartName" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="CharSetID" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Encoding" nillable="true" type="ns1:MailSectionEncodingEnum" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ContentStruct">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="HeaderTo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="IsTemplate" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="DocType" nillable="true" type="ns1:DocTypeEnum" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ContentID" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Description" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="NativeTitle" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="HeaderFrom" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Title" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ListName" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="SiteName" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="IsReadOnly" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="DateCreated" nillable="true" type="xsd:dateTime" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="DocParts" nillable="true" type="tns:ArrayOfDocPart" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="UrlTrackingStruct">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="UniqueOpens" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Opens" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Url" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="MemberStruct">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="Additional" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="MembershipKind" nillable="true" type="ns1:MemberKindEnum" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ApprovalNeeded" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Password" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="NotifyError" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ExpireDate" nillable="true" type="xsd:dateTime" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Comment" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="UserID" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ReadsHtml" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ReceiveAdminEmail" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="MailFormat" nillable="true" type="ns1:MailFormatEnum" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="DateConfirm" nillable="true" type="xsd:dateTime" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="NumberOfBounces" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="NumApprovalsNeeded" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="NotifySubmission" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="NoRepro" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="MemberID" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Demographics" nillable="true" type="tns:ArrayOfKeyValueType" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="EmailAddress" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="DateJoined" nillable="true" type="xsd:dateTime" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="IsListAdmin" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ReceiveAcknowlegment" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="DateBounce" nillable="true" type="xsd:dateTime" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="DateHeld" nillable="true" type="xsd:dateTime" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="MemberStatus" nillable="true" type="ns1:MemberStatusEnum" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="FullName" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="CanApprovePending" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="CleanAuto" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ListName" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="DateUnsubscribed" nillable="true" type="xsd:dateTime" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CharSetStruct">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="Description" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Name" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="CharSetID" nillable="true" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TinyMemberStruct">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="FullName" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="EmailAddress" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="MailingStruct">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="EnableRecency" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="IsHtmlSectionEncoded" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Subject" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Campaign" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="HtmlSectionEncoding" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="HtmlMessage" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="To" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="RecencyWhich" nillable="true" type="ns1:RecencyWhichEnum" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ResendAfterDays" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="SampleSize" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="CharSetID" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ReplyTo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="IsTextSectionEncoded" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="TextSectionEncoding" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Title" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="TextMessage" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="TrackOpens" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="RecencyNumberOfMailings" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="RecencyDays" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="BypassModeration" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Attachments" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="DontAttemptAfterDate" nillable="true" type="xsd:dateTime" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="RewriteDateWhenSent" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="From" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="AdditionalHeaders" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ListName" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="DetectHtml" nillable="true" type="xsd:boolean" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SegmentStruct">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="SegmentID" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="SegmentName" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Description" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="SegmentType" nillable="true" type="ns1:SegmentTypeEnum" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ListName" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="NumTestRecords" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ClauseAdd" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ClauseWhere" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ClauseAfterSelect" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ClauseFrom" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ClauseOrderBy" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ClauseSelect" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="AddWhereList" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="AddWhereMemberType" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="AddWhereSubType" nillable="true" type="xsd:boolean" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TrackingSummaryStruct">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="TransientFailure" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Success" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Expired" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Paused" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="MailMergeSkipped" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Active" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Opens" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Created" nillable="true" type="xsd:dateTime" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="NotAttempted" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Clickthroughs" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Title" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="TotalRecipients" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="PermanentFailure" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="TotalUndelivered" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="MailMergeAbort" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="UniqueOpens" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Clickstreams" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Pending" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Urls" nillable="true" type="tns:ArrayOfUrlTrackingStruct" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="MailingID" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Retry" nillable="true" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SimpleMemberStruct">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="ListName" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="MemberID" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="EmailAddress" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="KeyValueType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="Value" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Name" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ListStruct">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="SMTPHeaders" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ErrHold" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Admin" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="MaxMembers" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ReferralsPerDay" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="DetectOpenByDefault" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="SubscribePassword" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="MessageHeader" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="TclMergeInit" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ReplyTo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ModifyHeaderDate" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="SponsOrgID" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="DefaultTo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="RunProgAfterSub" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="NoListHeader" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ArchiveNum" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ConfirmSubscribes" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="AllowInfo" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="SimpleSub" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="MemberListSecurity" nillable="true" type="ns1:MemberListSecurityEnum" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="RunProgAfterUnsub" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="RunProgBeforePosting" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="PasswordRequired" nillable="true" type="ns1:PasswordRequiredEnum" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="OnlyAllowAdminSend" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="NoEmail" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ApproveNum" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="RecencySequentialEnabled" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="HeaderRemove" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="RecencyTriggeredEnabled" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="PurgeExpiredInterval" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="RunProgBeforeSub" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="NameRequired" nillable="true" type="ns1:NameRequiredEnum" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="DescLongDocID" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Comment" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="CommentsID" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="PurgeHeldInterval" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="PurgeUnsubInterval" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="DateCreated" nillable="true" type="xsd:dateTime" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="AutoReleaseHour" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Disabled" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="DigestHeader" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="RecencyWebEnabled" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="DontRewriteMessageIDHeader" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="AddHeadersAndFooters" nillable="true" type="ns1:AddHeadersAndFootersEnum" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Visitors" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="NoSearch" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="SubscriptionReports" nillable="true" type="tns:ArrayOfstring" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="NoNNTP" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="MaxMessageSize" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="PurgeReferredInterval" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="MakePostsAnonymous" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Keywords" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Additional" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="AddListNameToSubject" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="RecipientLoggingLevel" nillable="true" type="ns1:LoggingLevelEnum" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="EnableScripting" nillable="true" type="ns1:EnableScriptingEnum" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="To" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Topic" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="RunProgAfterPosting" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="CleanNotif" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="DeliveryReports" nillable="true" type="tns:ArrayOfstring" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="RecencyMailCount" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="RunProgBeforeUnsub" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Moderated" nillable="true" type="ns1:ModeratedEnum" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="AllowCrossPosting" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="MaxPostsPerUser" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ConfirmUnsubscribes" nillable="true" type="ns1:ConfirmUnsubEnum" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="NoArchive" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="RecencyDayCount" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="PurgeUnconfirmedInterval" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="RemoveDuplicateCrossPostings" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ArchiveDays" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="NotifyHeldInterval" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="TrackAllUrls" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="PurgeUnapprovedInterval" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="MessageFooter" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="RecencyOperator" nillable="true" type="ns1:RecencyOperatorEnum" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ListName" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="MaxQuoting" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="DefaultSubject" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ReleasePending" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="KeepOutmailPostings" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="PrivApprov" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="PostPassword" nillable="true" type="ns1:PostPasswordEnum" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="DefaultFrom" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="AnyoneCanPost" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ScriptingLevel" nillable="true" type="ns1:ScriptingLevelEnum" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Child" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ShortDescription" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="NoEmailSubscriptions" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="DetectHtmlByDefault" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="SMTPFrom" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="MriVisibility" nillable="true" type="ns1:MriVisibilityEnum" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ListID" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="BlankSubjectOk" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="AllowDuplicatePosts" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="RecencyEmailEnabled" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="MergeCapOverride" nillable="true" type="ns1:ScriptingLevelEnum" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="CleanAuto" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="From" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="NoBodyOk" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="NewSubscriberSecurity" nillable="true" type="ns1:NewSubscriberPolicyEnum" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="MaxMessNum" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="DigestFooter" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="MemberBanStruct">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="Domain" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="UserName" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ListName" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="SiteName" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="BanLogic" nillable="true" type="ns1:BanLogicEnum" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TopicStruct">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="TopicName" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="TopicDescription" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="SiteName" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="HiddenTopic" nillable="true" type="xsd:boolean" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SiteStruct">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="SiteID" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="SiteName" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="SiteDescription" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="HostName" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="WebInterfaceURL" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PreviewStruct">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="TextToMerge" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="MemberID" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="SubsetID" nillable="true" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ServerAdminStruct">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="AdminID" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Name" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="EmailAddress" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Password" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SiteAdminStruct">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="AdminID" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Name" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="EmailAddress" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Password" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="WhatSites" nillable="true" type="tns:ArrayOfstring" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:ns="http://www.lyris.com/lmapi" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.lyris.com/lmapi">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="ArrayOfDocPart">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:sequence>
+              <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="ns1:DocPart" />
+            </xsd:sequence>
+            <xsd:attribute WSDL:arrayType="ns1:DocPart[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfSimpleMemberStruct">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:sequence>
+              <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="ns1:SimpleMemberStruct" />
+            </xsd:sequence>
+            <xsd:attribute WSDL:arrayType="ns1:SimpleMemberStruct[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfCharSetStruct">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:sequence>
+              <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="ns1:CharSetStruct" />
+            </xsd:sequence>
+            <xsd:attribute WSDL:arrayType="ns1:CharSetStruct[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfKeyValueType">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:sequence>
+              <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="ns1:KeyValueType" />
+            </xsd:sequence>
+            <xsd:attribute WSDL:arrayType="ns1:KeyValueType[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfListStruct">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:sequence>
+              <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="ns1:ListStruct" />
+            </xsd:sequence>
+            <xsd:attribute WSDL:arrayType="ns1:ListStruct[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfMailingStruct">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:sequence>
+              <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="ns1:MailingStruct" />
+            </xsd:sequence>
+            <xsd:attribute WSDL:arrayType="ns1:MailingStruct[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfSegmentStruct">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:sequence>
+              <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="ns1:SegmentStruct" />
+            </xsd:sequence>
+            <xsd:attribute WSDL:arrayType="ns1:SegmentStruct[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfint">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:sequence>
+              <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="xsd:int" />
+            </xsd:sequence>
+            <xsd:attribute WSDL:arrayType="xsd:int[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfTrackingSummaryStruct">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:sequence>
+              <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="ns1:TrackingSummaryStruct" />
+            </xsd:sequence>
+            <xsd:attribute WSDL:arrayType="ns1:TrackingSummaryStruct[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfArrayOfstring">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:sequence>
+              <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:ArrayOfstring" />
+            </xsd:sequence>
+            <xsd:attribute WSDL:arrayType="tns:ArrayOfstring[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfMemberStruct">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:sequence>
+              <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="ns1:MemberStruct" />
+            </xsd:sequence>
+            <xsd:attribute WSDL:arrayType="ns1:MemberStruct[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfTinyMemberStruct">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:sequence>
+              <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="ns1:TinyMemberStruct" />
+            </xsd:sequence>
+            <xsd:attribute WSDL:arrayType="ns1:TinyMemberStruct[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfMemberBanStruct">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:sequence>
+              <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="ns1:MemberBanStruct" />
+            </xsd:sequence>
+            <xsd:attribute WSDL:arrayType="ns1:MemberBanStruct[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfstring">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:sequence>
+              <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="xsd:string" />
+            </xsd:sequence>
+            <xsd:attribute WSDL:arrayType="xsd:string[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfSimpleMailingStruct">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:sequence>
+              <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="ns1:SimpleMailingStruct" />
+            </xsd:sequence>
+            <xsd:attribute WSDL:arrayType="ns1:SimpleMailingStruct[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfContentStruct">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:sequence>
+              <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="ns1:ContentStruct" />
+            </xsd:sequence>
+            <xsd:attribute WSDL:arrayType="ns1:ContentStruct[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfUrlTrackingStruct">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:sequence>
+              <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="ns1:UrlTrackingStruct" />
+            </xsd:sequence>
+            <xsd:attribute WSDL:arrayType="ns1:UrlTrackingStruct[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+    </xsd:schema>
+  </WSDL:types>
+  <WSDL:message name="ApiVersionRequest" />
+  <WSDL:message name="ApiVersionResponse">
+    <WSDL:part name="return" type="xsd:string" />
+  </WSDL:message>
+  <WSDL:message name="CurrentUserEmailAddressRequest" />
+  <WSDL:message name="CurrentUserEmailAddressResponse">
+    <WSDL:part name="return" type="xsd:string" />
+  </WSDL:message>
+  <WSDL:message name="DeleteMembersRequest">
+    <WSDL:part name="FilterCriteriaArray" type="tns:ArrayOfstring" />
+  </WSDL:message>
+  <WSDL:message name="DeleteMembersResponse">
+    <WSDL:part name="return" type="xsd:int" />
+  </WSDL:message>
+  <WSDL:message name="GetMemberIDRequest">
+    <WSDL:part name="SimpleMemberStructIn" type="ns1:SimpleMemberStruct" />
+  </WSDL:message>
+  <WSDL:message name="GetMemberIDResponse">
+    <WSDL:part name="return" type="xsd:int" />
+  </WSDL:message>
+  <WSDL:message name="CreateSingleMemberRequest">
+    <WSDL:part name="EmailAddress" type="xsd:string" />
+    <WSDL:part name="FullName" type="xsd:string" />
+    <WSDL:part name="ListName" type="xsd:string" />
+  </WSDL:message>
+  <WSDL:message name="CreateSingleMemberResponse">
+    <WSDL:part name="return" type="xsd:int" />
+  </WSDL:message>
+  <WSDL:message name="CreateManyMembersRequest">
+    <WSDL:part name="ArrayOfTinyMemberStructIn" type="tns:ArrayOfTinyMemberStruct" />
+    <WSDL:part name="ListName" type="xsd:string" />
+    <WSDL:part name="SkipBadRecords" type="xsd:boolean" />
+  </WSDL:message>
+  <WSDL:message name="CreateManyMembersResponse">
+    <WSDL:part name="return" type="xsd:int" />
+  </WSDL:message>
+  <WSDL:message name="SqlSelectRequest">
+    <WSDL:part name="SqlStatement" type="xsd:string" />
+  </WSDL:message>
+  <WSDL:message name="SqlSelectResponse">
+    <WSDL:part name="return" type="tns:ArrayOfArrayOfstring" />
+  </WSDL:message>
+  <WSDL:message name="SqlInsertRequest">
+    <WSDL:part name="SqlStatement" type="xsd:string" />
+    <WSDL:part name="DataArray" type="tns:ArrayOfKeyValueType" />
+    <WSDL:part name="ReturnID" type="xsd:boolean" />
+  </WSDL:message>
+  <WSDL:message name="SqlInsertResponse">
+    <WSDL:part name="return" type="xsd:int" />
+  </WSDL:message>
+  <WSDL:message name="SqlUpdateRequest">
+    <WSDL:part name="SqlStatement" type="xsd:string" />
+    <WSDL:part name="DataArray" type="tns:ArrayOfKeyValueType" />
+    <WSDL:part name="SqlWhere" type="xsd:string" />
+  </WSDL:message>
+  <WSDL:message name="SqlUpdateResponse">
+    <WSDL:part name="return" type="xsd:boolean" />
+  </WSDL:message>
+  <WSDL:message name="SqlDeleteRequest">
+    <WSDL:part name="TableName" type="xsd:string" />
+    <WSDL:part name="SqlWhere" type="xsd:string" />
+  </WSDL:message>
+  <WSDL:message name="SqlDeleteResponse">
+    <WSDL:part name="return" type="xsd:boolean" />
+  </WSDL:message>
+  <WSDL:message name="UpdateMemberPasswordRequest">
+    <WSDL:part name="SimpleMemberStructIn" type="ns1:SimpleMemberStruct" />
+    <WSDL:part name="Password" type="xsd:string" />
+  </WSDL:message>
+  <WSDL:message name="UpdateMemberPasswordResponse">
+    <WSDL:part name="return" type="xsd:boolean" />
+  </WSDL:message>
+  <WSDL:message name="CheckMemberPasswordRequest">
+    <WSDL:part name="SimpleMemberStructIn" type="ns1:SimpleMemberStruct" />
+    <WSDL:part name="Password" type="xsd:string" />
+  </WSDL:message>
+  <WSDL:message name="CheckMemberPasswordResponse">
+    <WSDL:part name="return" type="xsd:boolean" />
+  </WSDL:message>
+  <WSDL:message name="CopyMemberRequest">
+    <WSDL:part name="SimpleMemberStructIn" type="ns1:SimpleMemberStruct" />
+    <WSDL:part name="EmailAddress" type="xsd:string" />
+    <WSDL:part name="FullName" type="xsd:string" />
+    <WSDL:part name="ListName" type="xsd:string" />
+  </WSDL:message>
+  <WSDL:message name="CopyMemberResponse">
+    <WSDL:part name="return" type="xsd:int" />
+  </WSDL:message>
+  <WSDL:message name="CreateListRequest">
+    <WSDL:part name="ListTypeEnumIn" type="ns1:ListTypeEnum" />
+    <WSDL:part name="ListName" type="xsd:string" />
+    <WSDL:part name="ShortDescription" type="xsd:string" />
+    <WSDL:part name="AdminName" type="xsd:string" />
+    <WSDL:part name="AdminEmail" type="xsd:string" />
+    <WSDL:part name="AdminPassword" type="xsd:string" />
+    <WSDL:part name="Topic" type="xsd:string" />
+  </WSDL:message>
+  <WSDL:message name="CreateListResponse">
+    <WSDL:part name="return" type="xsd:int" />
+  </WSDL:message>
+  <WSDL:message name="DeleteListRequest">
+    <WSDL:part name="ListName" type="xsd:string" />
+  </WSDL:message>
+  <WSDL:message name="DeleteListResponse">
+    <WSDL:part name="return" type="xsd:boolean" />
+  </WSDL:message>
+  <WSDL:message name="EmailOnWhatListsRequest">
+    <WSDL:part name="EmailAddress" type="xsd:string" />
+  </WSDL:message>
+  <WSDL:message name="EmailOnWhatListsResponse">
+    <WSDL:part name="return" type="tns:ArrayOfstring" />
+  </WSDL:message>
+  <WSDL:message name="EmailPasswordOnWhatListsRequest">
+    <WSDL:part name="EmailAddress" type="xsd:string" />
+    <WSDL:part name="Password" type="xsd:string" />
+  </WSDL:message>
+  <WSDL:message name="EmailPasswordOnWhatListsResponse">
+    <WSDL:part name="return" type="tns:ArrayOfstring" />
+  </WSDL:message>
+  <WSDL:message name="CreateListAdminRequest">
+    <WSDL:part name="AdminEmail" type="xsd:string" />
+    <WSDL:part name="AdminPassword" type="xsd:string" />
+    <WSDL:part name="AdminListName" type="xsd:string" />
+    <WSDL:part name="AdminFullName" type="xsd:string" />
+    <WSDL:part name="ReceiveListAdminMail" type="xsd:boolean" />
+    <WSDL:part name="ReceiveModerationNotification" type="xsd:boolean" />
+    <WSDL:part name="BypassListModeration" type="xsd:boolean" />
+  </WSDL:message>
+  <WSDL:message name="CreateListAdminResponse">
+    <WSDL:part name="return" type="xsd:int" />
+  </WSDL:message>
+  <WSDL:message name="CreateMemberBanRequest">
+    <WSDL:part name="MemberBanStructIn" type="ns1:MemberBanStruct" />
+  </WSDL:message>
+  <WSDL:message name="CreateMemberBanResponse">
+    <WSDL:part name="return" type="xsd:int" />
+  </WSDL:message>
+  <WSDL:message name="GetEmailFromMemberIDRequest">
+    <WSDL:part name="MemberID" type="xsd:int" />
+  </WSDL:message>
+  <WSDL:message name="GetEmailFromMemberIDResponse">
+    <WSDL:part name="return" type="xsd:string" />
+  </WSDL:message>
+  <WSDL:message name="GetListIDRequest">
+    <WSDL:part name="ListName" type="xsd:string" />
+  </WSDL:message>
+  <WSDL:message name="GetListIDResponse">
+    <WSDL:part name="return" type="xsd:int" />
+  </WSDL:message>
+  <WSDL:message name="GetListnameFromMemberIDRequest">
+    <WSDL:part name="MemberID" type="xsd:int" />
+  </WSDL:message>
+  <WSDL:message name="GetListnameFromMemberIDResponse">
+    <WSDL:part name="return" type="xsd:string" />
+  </WSDL:message>
+  <WSDL:message name="ImportContentRequest">
+    <WSDL:part name="ContentID" type="xsd:int" />
+  </WSDL:message>
+  <WSDL:message name="ImportContentResponse">
+    <WSDL:part name="return" type="ns1:SimpleMailingStruct" />
+  </WSDL:message>
+  <WSDL:message name="SelectMembersRequest">
+    <WSDL:part name="FilterCriteriaArray" type="tns:ArrayOfstring" />
+  </WSDL:message>
+  <WSDL:message name="SelectMembersResponse">
+    <WSDL:part name="return" type="tns:ArrayOfMemberStruct" />
+  </WSDL:message>
+  <WSDL:message name="SelectSimpleMembersRequest">
+    <WSDL:part name="FilterCriteriaArray" type="tns:ArrayOfstring" />
+  </WSDL:message>
+  <WSDL:message name="SelectSimpleMembersResponse">
+    <WSDL:part name="return" type="tns:ArrayOfSimpleMemberStruct" />
+  </WSDL:message>
+  <WSDL:message name="SendMailingRequest">
+    <WSDL:part name="SegmentID" type="xsd:int" />
+    <WSDL:part name="MailingStructIn" type="ns1:MailingStruct" />
+  </WSDL:message>
+  <WSDL:message name="SendMailingResponse">
+    <WSDL:part name="return" type="xsd:int" />
+  </WSDL:message>
+  <WSDL:message name="MailingStatusRequest">
+    <WSDL:part name="MailingID" type="xsd:int" />
+  </WSDL:message>
+  <WSDL:message name="MailingStatusResponse">
+    <WSDL:part name="return" type="xsd:string" />
+  </WSDL:message>
+  <WSDL:message name="ScheduleMailingRequest">
+    <WSDL:part name="SegmentID" type="xsd:int" />
+    <WSDL:part name="SendDate" type="xsd:dateTime" />
+    <WSDL:part name="MailingStructIn" type="ns1:MailingStruct" />
+  </WSDL:message>
+  <WSDL:message name="ScheduleMailingResponse">
+    <WSDL:part name="return" type="xsd:int" />
+  </WSDL:message>
+  <WSDL:message name="ModerateMailingRequest">
+    <WSDL:part name="ModerateID" type="xsd:int" />
+    <WSDL:part name="Accept" type="xsd:boolean" />
+    <WSDL:part name="SendRejectMessage" type="xsd:boolean" />
+  </WSDL:message>
+  <WSDL:message name="ModerateMailingResponse">
+    <WSDL:part name="return" type="xsd:boolean" />
+  </WSDL:message>
+  <WSDL:message name="SelectContentRequest">
+    <WSDL:part name="FilterCriteriaArray" type="tns:ArrayOfstring" />
+  </WSDL:message>
+  <WSDL:message name="SelectContentResponse">
+    <WSDL:part name="return" type="tns:ArrayOfContentStruct" />
+  </WSDL:message>
+  <WSDL:message name="SelectListsRequest">
+    <WSDL:part name="ListName" type="xsd:string" />
+    <WSDL:part name="SiteName" type="xsd:string" />
+  </WSDL:message>
+  <WSDL:message name="SelectListsResponse">
+    <WSDL:part name="return" type="tns:ArrayOfListStruct" />
+  </WSDL:message>
+  <WSDL:message name="SelectSegmentsRequest">
+    <WSDL:part name="FilterCriteriaArray" type="tns:ArrayOfstring" />
+  </WSDL:message>
+  <WSDL:message name="SelectSegmentsResponse">
+    <WSDL:part name="return" type="tns:ArrayOfSegmentStruct" />
+  </WSDL:message>
+  <WSDL:message name="SendMailingDirectRequest">
+    <WSDL:part name="EmailAddressArray" type="tns:ArrayOfstring" />
+    <WSDL:part name="MemberIDArray" type="tns:ArrayOfint" />
+    <WSDL:part name="MailingStructIn" type="ns1:MailingStruct" />
+  </WSDL:message>
+  <WSDL:message name="SendMailingDirectResponse">
+    <WSDL:part name="return" type="xsd:int" />
+  </WSDL:message>
+  <WSDL:message name="SendMemberDocRequest">
+    <WSDL:part name="SimpleMemberStructIn" type="ns1:SimpleMemberStruct" />
+    <WSDL:part name="DocTypeIn" type="ns1:MessageTypeEnum" />
+  </WSDL:message>
+  <WSDL:message name="SendMemberDocResponse">
+    <WSDL:part name="return" type="xsd:int" />
+  </WSDL:message>
+  <WSDL:message name="TrackingSummaryRequest">
+    <WSDL:part name="OutMailID" type="xsd:int" />
+  </WSDL:message>
+  <WSDL:message name="TrackingSummaryResponse">
+    <WSDL:part name="return" type="ns1:TrackingSummaryStruct" />
+  </WSDL:message>
+  <WSDL:message name="UnsubscribeRequest">
+    <WSDL:part name="SimpleMemberStructArrayIn" type="tns:ArrayOfSimpleMemberStruct" />
+  </WSDL:message>
+  <WSDL:message name="UnsubscribeResponse">
+    <WSDL:part name="return" type="xsd:int" />
+  </WSDL:message>
+  <WSDL:message name="UpdateMemberEmailRequest">
+    <WSDL:part name="SimpleMemberStructIn" type="ns1:SimpleMemberStruct" />
+    <WSDL:part name="EmailAddress" type="xsd:string" />
+  </WSDL:message>
+  <WSDL:message name="UpdateMemberEmailResponse">
+    <WSDL:part name="return" type="xsd:boolean" />
+  </WSDL:message>
+  <WSDL:message name="UpdateMemberKindRequest">
+    <WSDL:part name="SimpleMemberStructIn" type="ns1:SimpleMemberStruct" />
+    <WSDL:part name="MemberKind" type="ns1:MemberKindEnum" />
+  </WSDL:message>
+  <WSDL:message name="UpdateMemberKindResponse">
+    <WSDL:part name="return" type="xsd:boolean" />
+  </WSDL:message>
+  <WSDL:message name="UpdateMemberStatusRequest">
+    <WSDL:part name="SimpleMemberStructIn" type="ns1:SimpleMemberStruct" />
+    <WSDL:part name="MemberStatus" type="ns1:MemberStatusEnum" />
+  </WSDL:message>
+  <WSDL:message name="UpdateMemberStatusResponse">
+    <WSDL:part name="return" type="xsd:boolean" />
+  </WSDL:message>
+  <WSDL:message name="UpdateListRequest">
+    <WSDL:part name="ListStructIn" type="ns1:ListStruct" />
+  </WSDL:message>
+  <WSDL:message name="UpdateListResponse">
+    <WSDL:part name="return" type="xsd:boolean" />
+  </WSDL:message>
+  <WSDL:message name="UpdateListAdminRequest">
+    <WSDL:part name="SimpleMemberStructIn" type="ns1:SimpleMemberStruct" />
+    <WSDL:part name="IsListAdmin" type="xsd:boolean" />
+    <WSDL:part name="ReceiveListAdminMail" type="xsd:boolean" />
+    <WSDL:part name="ReceiveModerationNotification" type="xsd:boolean" />
+    <WSDL:part name="BypassListModeration" type="xsd:boolean" />
+  </WSDL:message>
+  <WSDL:message name="UpdateListAdminResponse">
+    <WSDL:part name="return" type="xsd:boolean" />
+  </WSDL:message>
+  <WSDL:message name="UpdateMemberDemographicsRequest">
+    <WSDL:part name="SimpleMemberStructIn" type="ns1:SimpleMemberStruct" />
+    <WSDL:part name="DemographicsArray" type="tns:ArrayOfKeyValueType" />
+  </WSDL:message>
+  <WSDL:message name="UpdateMemberDemographicsResponse">
+    <WSDL:part name="return" type="xsd:boolean" />
+  </WSDL:message>
+  <WSDL:message name="CreateMemberColumnRequest">
+    <WSDL:part name="FieldName" type="xsd:string" />
+    <WSDL:part name="FieldType" type="ns1:FieldTypeEnum" />
+  </WSDL:message>
+  <WSDL:message name="CreateMemberColumnResponse">
+    <WSDL:part name="return" type="xsd:boolean" />
+  </WSDL:message>
+  <WSDL:message name="DeleteMemberColumnRequest">
+    <WSDL:part name="FieldName" type="xsd:string" />
+  </WSDL:message>
+  <WSDL:message name="DeleteMemberColumnResponse">
+    <WSDL:part name="return" type="xsd:boolean" />
+  </WSDL:message>
+  <WSDL:message name="CreateSegmentRequest">
+    <WSDL:part name="SegmentStructIn" type="ns1:SegmentStruct" />
+  </WSDL:message>
+  <WSDL:message name="CreateSegmentResponse">
+    <WSDL:part name="return" type="xsd:int" />
+  </WSDL:message>
+  <WSDL:message name="UpdateSegmentRequest">
+    <WSDL:part name="SegmentStructIn" type="ns1:SegmentStruct" />
+  </WSDL:message>
+  <WSDL:message name="UpdateSegmentResponse">
+    <WSDL:part name="return" type="xsd:boolean" />
+  </WSDL:message>
+  <WSDL:message name="DeleteSegmentRequest">
+    <WSDL:part name="SegmentID" type="xsd:int" />
+  </WSDL:message>
+  <WSDL:message name="DeleteSegmentResponse">
+    <WSDL:part name="return" type="xsd:boolean" />
+  </WSDL:message>
+  <WSDL:message name="SendMessageRequest">
+    <WSDL:part name="MessageStructIn" type="ns1:MessageStruct" />
+  </WSDL:message>
+  <WSDL:message name="SendMessageResponse">
+    <WSDL:part name="return" type="xsd:int" />
+  </WSDL:message>
+  <WSDL:message name="CreateSiteRequest">
+    <WSDL:part name="SiteStructIn" type="ns1:SiteStruct" />
+  </WSDL:message>
+  <WSDL:message name="CreateSiteResponse">
+    <WSDL:part name="return" type="xsd:int" />
+  </WSDL:message>
+  <WSDL:message name="UpdateSiteRequest">
+    <WSDL:part name="SiteStructIn" type="ns1:SiteStruct" />
+  </WSDL:message>
+  <WSDL:message name="UpdateSiteResponse">
+    <WSDL:part name="return" type="xsd:boolean" />
+  </WSDL:message>
+  <WSDL:message name="DeleteSiteRequest">
+    <WSDL:part name="SiteID" type="xsd:int" />
+  </WSDL:message>
+  <WSDL:message name="DeleteSiteResponse">
+    <WSDL:part name="return" type="xsd:boolean" />
+  </WSDL:message>
+  <WSDL:message name="CreateTopicRequest">
+    <WSDL:part name="TopicStructIn" type="ns1:TopicStruct" />
+  </WSDL:message>
+  <WSDL:message name="CreateTopicResponse">
+    <WSDL:part name="return" type="xsd:boolean" />
+  </WSDL:message>
+  <WSDL:message name="UpdateTopicRequest">
+    <WSDL:part name="TopicStructIn" type="ns1:TopicStruct" />
+  </WSDL:message>
+  <WSDL:message name="UpdateTopicResponse">
+    <WSDL:part name="return" type="xsd:boolean" />
+  </WSDL:message>
+  <WSDL:message name="DeleteTopicRequest">
+    <WSDL:part name="TopicTitle" type="xsd:string" />
+  </WSDL:message>
+  <WSDL:message name="DeleteTopicResponse">
+    <WSDL:part name="return" type="xsd:boolean" />
+  </WSDL:message>
+  <WSDL:message name="GetPreviewMailingRequest">
+    <WSDL:part name="PreviewStructIn" type="ns1:PreviewStruct" />
+  </WSDL:message>
+  <WSDL:message name="GetPreviewMailingResponse">
+    <WSDL:part name="return" type="xsd:string" />
+  </WSDL:message>
+  <WSDL:message name="CreateServerAdminRequest">
+    <WSDL:part name="ServerAdminStructIn" type="ns1:ServerAdminStruct" />
+  </WSDL:message>
+  <WSDL:message name="CreateServerAdminResponse">
+    <WSDL:part name="return" type="xsd:int" />
+  </WSDL:message>
+  <WSDL:message name="UpdateServerAdminRequest">
+    <WSDL:part name="ServerAdminStructIn" type="ns1:ServerAdminStruct" />
+  </WSDL:message>
+  <WSDL:message name="UpdateServerAdminResponse">
+    <WSDL:part name="return" type="xsd:boolean" />
+  </WSDL:message>
+  <WSDL:message name="DeleteServerAdminRequest">
+    <WSDL:part name="ServerAdminStructIn" type="ns1:ServerAdminStruct" />
+  </WSDL:message>
+  <WSDL:message name="DeleteServerAdminResponse">
+    <WSDL:part name="return" type="xsd:boolean" />
+  </WSDL:message>
+  <WSDL:message name="CreateSiteAdminRequest">
+    <WSDL:part name="SiteAdminStructIn" type="ns1:SiteAdminStruct" />
+  </WSDL:message>
+  <WSDL:message name="CreateSiteAdminResponse">
+    <WSDL:part name="return" type="xsd:int" />
+  </WSDL:message>
+  <WSDL:message name="UpdateSiteAdminRequest">
+    <WSDL:part name="SiteAdminStructIn" type="ns1:SiteAdminStruct" />
+  </WSDL:message>
+  <WSDL:message name="UpdateSiteAdminResponse">
+    <WSDL:part name="return" type="xsd:boolean" />
+  </WSDL:message>
+  <WSDL:message name="DeleteSiteAdminRequest">
+    <WSDL:part name="SiteAdminStructIn" type="ns1:SiteAdminStruct" />
+  </WSDL:message>
+  <WSDL:message name="DeleteSiteAdminResponse">
+    <WSDL:part name="return" type="xsd:boolean" />
+  </WSDL:message>
+  <WSDL:message name="CreateContentRequest">
+    <WSDL:part name="ContentStructIn" type="ns1:ContentStruct" />
+  </WSDL:message>
+  <WSDL:message name="CreateContentResponse">
+    <WSDL:part name="return" type="xsd:int" />
+  </WSDL:message>
+  <WSDL:message name="UpdateContentRequest">
+    <WSDL:part name="ContentStructIn" type="ns1:ContentStruct" />
+  </WSDL:message>
+  <WSDL:message name="UpdateContentResponse">
+    <WSDL:part name="return" type="xsd:boolean" />
+  </WSDL:message>
+  <WSDL:message name="DeleteContentRequest">
+    <WSDL:part name="ContentStructIn" type="ns1:ContentStruct" />
+  </WSDL:message>
+  <WSDL:message name="DeleteContentResponse">
+    <WSDL:part name="return" type="xsd:boolean" />
+  </WSDL:message>
+  <WSDL:message name="SelectListsExRequest">
+    <WSDL:part name="ListName" type="xsd:string" />
+    <WSDL:part name="SiteName" type="xsd:string" />
+    <WSDL:part name="FieldsToFetch" type="tns:ArrayOfstring" />
+    <WSDL:part name="WhereClause" type="tns:ArrayOfstring" />
+  </WSDL:message>
+  <WSDL:message name="SelectListsExResponse">
+    <WSDL:part name="return" type="tns:ArrayOfArrayOfstring" />
+  </WSDL:message>
+  <WSDL:message name="SelectMembersExRequest">
+    <WSDL:part name="FieldsToFetch" type="tns:ArrayOfstring" />
+    <WSDL:part name="FilterCriteriaArray" type="tns:ArrayOfstring" />
+  </WSDL:message>
+  <WSDL:message name="SelectMembersExResponse">
+    <WSDL:part name="return" type="tns:ArrayOfArrayOfstring" />
+  </WSDL:message>
+  <WSDL:portType name="lmapiSoap">
+    <WSDL:operation name="ApiVersion">
+      <documentation>Service definition of function ns__ApiVersion</documentation>
+      <WSDL:input message="tns:ApiVersionRequest" />
+      <WSDL:output message="tns:ApiVersionResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="CurrentUserEmailAddress">
+      <documentation>Service definition of function ns__CurrentUserEmailAddress</documentation>
+      <WSDL:input message="tns:CurrentUserEmailAddressRequest" />
+      <WSDL:output message="tns:CurrentUserEmailAddressResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="DeleteMembers">
+      <documentation>Service definition of function ns__DeleteMembers</documentation>
+      <WSDL:input message="tns:DeleteMembersRequest" />
+      <WSDL:output message="tns:DeleteMembersResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="GetMemberID">
+      <documentation>Service definition of function ns__GetMemberID</documentation>
+      <WSDL:input message="tns:GetMemberIDRequest" />
+      <WSDL:output message="tns:GetMemberIDResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="CreateSingleMember">
+      <documentation>Service definition of function ns__CreateSingleMember</documentation>
+      <WSDL:input message="tns:CreateSingleMemberRequest" />
+      <WSDL:output message="tns:CreateSingleMemberResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="CreateManyMembers">
+      <documentation>Service definition of function ns__CreateManyMembers</documentation>
+      <WSDL:input message="tns:CreateManyMembersRequest" />
+      <WSDL:output message="tns:CreateManyMembersResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="SqlSelect">
+      <documentation>Service definition of function ns__SqlSelect</documentation>
+      <WSDL:input message="tns:SqlSelectRequest" />
+      <WSDL:output message="tns:SqlSelectResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="SqlInsert">
+      <documentation>Service definition of function ns__SqlInsert</documentation>
+      <WSDL:input message="tns:SqlInsertRequest" />
+      <WSDL:output message="tns:SqlInsertResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="SqlUpdate">
+      <documentation>Service definition of function ns__SqlUpdate</documentation>
+      <WSDL:input message="tns:SqlUpdateRequest" />
+      <WSDL:output message="tns:SqlUpdateResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="SqlDelete">
+      <documentation>Service definition of function ns__SqlDelete</documentation>
+      <WSDL:input message="tns:SqlDeleteRequest" />
+      <WSDL:output message="tns:SqlDeleteResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="UpdateMemberPassword">
+      <documentation>Service definition of function ns__UpdateMemberPassword</documentation>
+      <WSDL:input message="tns:UpdateMemberPasswordRequest" />
+      <WSDL:output message="tns:UpdateMemberPasswordResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="CheckMemberPassword">
+      <documentation>Service definition of function ns__CheckMemberPassword</documentation>
+      <WSDL:input message="tns:CheckMemberPasswordRequest" />
+      <WSDL:output message="tns:CheckMemberPasswordResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="CopyMember">
+      <documentation>Service definition of function ns__CopyMember</documentation>
+      <WSDL:input message="tns:CopyMemberRequest" />
+      <WSDL:output message="tns:CopyMemberResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="CreateList">
+      <documentation>Service definition of function ns__CreateList</documentation>
+      <WSDL:input message="tns:CreateListRequest" />
+      <WSDL:output message="tns:CreateListResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="DeleteList">
+      <documentation>Service definition of function ns__DeleteList</documentation>
+      <WSDL:input message="tns:DeleteListRequest" />
+      <WSDL:output message="tns:DeleteListResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="EmailOnWhatLists">
+      <documentation>Service definition of function ns__EmailOnWhatLists</documentation>
+      <WSDL:input message="tns:EmailOnWhatListsRequest" />
+      <WSDL:output message="tns:EmailOnWhatListsResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="EmailPasswordOnWhatLists">
+      <documentation>Service definition of function ns__EmailPasswordOnWhatLists</documentation>
+      <WSDL:input message="tns:EmailPasswordOnWhatListsRequest" />
+      <WSDL:output message="tns:EmailPasswordOnWhatListsResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="CreateListAdmin">
+      <documentation>Service definition of function ns__CreateListAdmin</documentation>
+      <WSDL:input message="tns:CreateListAdminRequest" />
+      <WSDL:output message="tns:CreateListAdminResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="CreateMemberBan">
+      <documentation>Service definition of function ns__CreateMemberBan</documentation>
+      <WSDL:input message="tns:CreateMemberBanRequest" />
+      <WSDL:output message="tns:CreateMemberBanResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="GetEmailFromMemberID">
+      <documentation>Service definition of function ns__GetEmailFromMemberID</documentation>
+      <WSDL:input message="tns:GetEmailFromMemberIDRequest" />
+      <WSDL:output message="tns:GetEmailFromMemberIDResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="GetListID">
+      <documentation>Service definition of function ns__GetListID</documentation>
+      <WSDL:input message="tns:GetListIDRequest" />
+      <WSDL:output message="tns:GetListIDResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="GetListnameFromMemberID">
+      <documentation>Service definition of function ns__GetListnameFromMemberID</documentation>
+      <WSDL:input message="tns:GetListnameFromMemberIDRequest" />
+      <WSDL:output message="tns:GetListnameFromMemberIDResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="ImportContent">
+      <documentation>Service definition of function ns__ImportContent</documentation>
+      <WSDL:input message="tns:ImportContentRequest" />
+      <WSDL:output message="tns:ImportContentResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="SelectMembers">
+      <documentation>Service definition of function ns__SelectMembers</documentation>
+      <WSDL:input message="tns:SelectMembersRequest" />
+      <WSDL:output message="tns:SelectMembersResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="SelectSimpleMembers">
+      <documentation>Service definition of function ns__SelectSimpleMembers</documentation>
+      <WSDL:input message="tns:SelectSimpleMembersRequest" />
+      <WSDL:output message="tns:SelectSimpleMembersResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="SendMailing">
+      <documentation>Service definition of function ns__SendMailing</documentation>
+      <WSDL:input message="tns:SendMailingRequest" />
+      <WSDL:output message="tns:SendMailingResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="MailingStatus">
+      <documentation>Service definition of function ns__MailingStatus</documentation>
+      <WSDL:input message="tns:MailingStatusRequest" />
+      <WSDL:output message="tns:MailingStatusResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="ScheduleMailing">
+      <documentation>Service definition of function ns__ScheduleMailing</documentation>
+      <WSDL:input message="tns:ScheduleMailingRequest" />
+      <WSDL:output message="tns:ScheduleMailingResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="ModerateMailing">
+      <documentation>Service definition of function ns__ModerateMailing</documentation>
+      <WSDL:input message="tns:ModerateMailingRequest" />
+      <WSDL:output message="tns:ModerateMailingResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="SelectContent">
+      <documentation>Service definition of function ns__SelectContent</documentation>
+      <WSDL:input message="tns:SelectContentRequest" />
+      <WSDL:output message="tns:SelectContentResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="SelectLists">
+      <documentation>Service definition of function ns__SelectLists</documentation>
+      <WSDL:input message="tns:SelectListsRequest" />
+      <WSDL:output message="tns:SelectListsResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="SelectSegments">
+      <documentation>Service definition of function ns__SelectSegments</documentation>
+      <WSDL:input message="tns:SelectSegmentsRequest" />
+      <WSDL:output message="tns:SelectSegmentsResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="SendMailingDirect">
+      <documentation>Service definition of function ns__SendMailingDirect</documentation>
+      <WSDL:input message="tns:SendMailingDirectRequest" />
+      <WSDL:output message="tns:SendMailingDirectResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="SendMemberDoc">
+      <documentation>Service definition of function ns__SendMemberDoc</documentation>
+      <WSDL:input message="tns:SendMemberDocRequest" />
+      <WSDL:output message="tns:SendMemberDocResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="TrackingSummary">
+      <documentation>Service definition of function ns__TrackingSummary</documentation>
+      <WSDL:input message="tns:TrackingSummaryRequest" />
+      <WSDL:output message="tns:TrackingSummaryResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="Unsubscribe">
+      <documentation>Service definition of function ns__Unsubscribe</documentation>
+      <WSDL:input message="tns:UnsubscribeRequest" />
+      <WSDL:output message="tns:UnsubscribeResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="UpdateMemberEmail">
+      <documentation>Service definition of function ns__UpdateMemberEmail</documentation>
+      <WSDL:input message="tns:UpdateMemberEmailRequest" />
+      <WSDL:output message="tns:UpdateMemberEmailResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="UpdateMemberKind">
+      <documentation>Service definition of function ns__UpdateMemberKind</documentation>
+      <WSDL:input message="tns:UpdateMemberKindRequest" />
+      <WSDL:output message="tns:UpdateMemberKindResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="UpdateMemberStatus">
+      <documentation>Service definition of function ns__UpdateMemberStatus</documentation>
+      <WSDL:input message="tns:UpdateMemberStatusRequest" />
+      <WSDL:output message="tns:UpdateMemberStatusResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="UpdateList">
+      <documentation>Service definition of function ns__UpdateList</documentation>
+      <WSDL:input message="tns:UpdateListRequest" />
+      <WSDL:output message="tns:UpdateListResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="UpdateListAdmin">
+      <documentation>Service definition of function ns__UpdateListAdmin</documentation>
+      <WSDL:input message="tns:UpdateListAdminRequest" />
+      <WSDL:output message="tns:UpdateListAdminResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="UpdateMemberDemographics">
+      <documentation>Service definition of function ns__UpdateMemberDemographics</documentation>
+      <WSDL:input message="tns:UpdateMemberDemographicsRequest" />
+      <WSDL:output message="tns:UpdateMemberDemographicsResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="CreateMemberColumn">
+      <documentation>Service definition of function ns__CreateMemberColumn</documentation>
+      <WSDL:input message="tns:CreateMemberColumnRequest" />
+      <WSDL:output message="tns:CreateMemberColumnResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="DeleteMemberColumn">
+      <documentation>Service definition of function ns__DeleteMemberColumn</documentation>
+      <WSDL:input message="tns:DeleteMemberColumnRequest" />
+      <WSDL:output message="tns:DeleteMemberColumnResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="CreateSegment">
+      <documentation>Service definition of function ns__CreateSegment</documentation>
+      <WSDL:input message="tns:CreateSegmentRequest" />
+      <WSDL:output message="tns:CreateSegmentResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="UpdateSegment">
+      <documentation>Service definition of function ns__UpdateSegment</documentation>
+      <WSDL:input message="tns:UpdateSegmentRequest" />
+      <WSDL:output message="tns:UpdateSegmentResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="DeleteSegment">
+      <documentation>Service definition of function ns__DeleteSegment</documentation>
+      <WSDL:input message="tns:DeleteSegmentRequest" />
+      <WSDL:output message="tns:DeleteSegmentResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="SendMessage">
+      <documentation>Service definition of function ns__SendMessage</documentation>
+      <WSDL:input message="tns:SendMessageRequest" />
+      <WSDL:output message="tns:SendMessageResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="CreateSite">
+      <documentation>Service definition of function ns__CreateSite</documentation>
+      <WSDL:input message="tns:CreateSiteRequest" />
+      <WSDL:output message="tns:CreateSiteResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="UpdateSite">
+      <documentation>Service definition of function ns__UpdateSite</documentation>
+      <WSDL:input message="tns:UpdateSiteRequest" />
+      <WSDL:output message="tns:UpdateSiteResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="DeleteSite">
+      <documentation>Service definition of function ns__DeleteSite</documentation>
+      <WSDL:input message="tns:DeleteSiteRequest" />
+      <WSDL:output message="tns:DeleteSiteResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="CreateTopic">
+      <documentation>Service definition of function ns__CreateTopic</documentation>
+      <WSDL:input message="tns:CreateTopicRequest" />
+      <WSDL:output message="tns:CreateTopicResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="UpdateTopic">
+      <documentation>Service definition of function ns__UpdateTopic</documentation>
+      <WSDL:input message="tns:UpdateTopicRequest" />
+      <WSDL:output message="tns:UpdateTopicResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="DeleteTopic">
+      <documentation>Service definition of function ns__DeleteTopic</documentation>
+      <WSDL:input message="tns:DeleteTopicRequest" />
+      <WSDL:output message="tns:DeleteTopicResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="GetPreviewMailing">
+      <documentation>Service definition of function ns__GetPreviewMailing</documentation>
+      <WSDL:input message="tns:GetPreviewMailingRequest" />
+      <WSDL:output message="tns:GetPreviewMailingResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="CreateServerAdmin">
+      <documentation>Service definition of function ns__CreateServerAdmin</documentation>
+      <WSDL:input message="tns:CreateServerAdminRequest" />
+      <WSDL:output message="tns:CreateServerAdminResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="UpdateServerAdmin">
+      <documentation>Service definition of function ns__UpdateServerAdmin</documentation>
+      <WSDL:input message="tns:UpdateServerAdminRequest" />
+      <WSDL:output message="tns:UpdateServerAdminResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="DeleteServerAdmin">
+      <documentation>Service definition of function ns__DeleteServerAdmin</documentation>
+      <WSDL:input message="tns:DeleteServerAdminRequest" />
+      <WSDL:output message="tns:DeleteServerAdminResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="CreateSiteAdmin">
+      <documentation>Service definition of function ns__CreateSiteAdmin</documentation>
+      <WSDL:input message="tns:CreateSiteAdminRequest" />
+      <WSDL:output message="tns:CreateSiteAdminResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="UpdateSiteAdmin">
+      <documentation>Service definition of function ns__UpdateSiteAdmin</documentation>
+      <WSDL:input message="tns:UpdateSiteAdminRequest" />
+      <WSDL:output message="tns:UpdateSiteAdminResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="DeleteSiteAdmin">
+      <documentation>Service definition of function ns__DeleteSiteAdmin</documentation>
+      <WSDL:input message="tns:DeleteSiteAdminRequest" />
+      <WSDL:output message="tns:DeleteSiteAdminResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="CreateContent">
+      <documentation>Service definition of function ns__CreateContent</documentation>
+      <WSDL:input message="tns:CreateContentRequest" />
+      <WSDL:output message="tns:CreateContentResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="UpdateContent">
+      <documentation>Service definition of function ns__UpdateContent</documentation>
+      <WSDL:input message="tns:UpdateContentRequest" />
+      <WSDL:output message="tns:UpdateContentResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="DeleteContent">
+      <documentation>Service definition of function ns__DeleteContent</documentation>
+      <WSDL:input message="tns:DeleteContentRequest" />
+      <WSDL:output message="tns:DeleteContentResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="SelectListsEx">
+      <documentation>Service definition of function ns__SelectListsEx</documentation>
+      <WSDL:input message="tns:SelectListsExRequest" />
+      <WSDL:output message="tns:SelectListsExResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="SelectMembersEx">
+      <documentation>Service definition of function ns__SelectMembersEx</documentation>
+      <WSDL:input message="tns:SelectMembersExRequest" />
+      <WSDL:output message="tns:SelectMembersExResponse" />
+    </WSDL:operation>
+  </WSDL:portType>
+  <WSDL:binding name="lmapi" type="tns:lmapiSoap">
+    <SOAP:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <WSDL:operation name="ApiVersion">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="CurrentUserEmailAddress">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="DeleteMembers">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="GetMemberID">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="CreateSingleMember">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="CreateManyMembers">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="SqlSelect">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="SqlInsert">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="SqlUpdate">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="SqlDelete">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="UpdateMemberPassword">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="CheckMemberPassword">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="CopyMember">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="CreateList">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="DeleteList">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="EmailOnWhatLists">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="EmailPasswordOnWhatLists">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="CreateListAdmin">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="CreateMemberBan">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="GetEmailFromMemberID">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="GetListID">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="GetListnameFromMemberID">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="ImportContent">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="SelectMembers">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="SelectSimpleMembers">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="SendMailing">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="MailingStatus">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="ScheduleMailing">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="ModerateMailing">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="SelectContent">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="SelectLists">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="SelectSegments">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="SendMailingDirect">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="SendMemberDoc">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="TrackingSummary">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="Unsubscribe">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="UpdateMemberEmail">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="UpdateMemberKind">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="UpdateMemberStatus">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="UpdateList">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="UpdateListAdmin">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="UpdateMemberDemographics">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="CreateMemberColumn">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="DeleteMemberColumn">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="CreateSegment">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="UpdateSegment">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="DeleteSegment">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="SendMessage">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="CreateSite">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="UpdateSite">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="DeleteSite">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="CreateTopic">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="UpdateTopic">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="DeleteTopic">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="GetPreviewMailing">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="CreateServerAdmin">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="UpdateServerAdmin">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="DeleteServerAdmin">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="CreateSiteAdmin">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="UpdateSiteAdmin">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="DeleteSiteAdmin">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="CreateContent">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="UpdateContent">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="DeleteContent">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="SelectListsEx">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="SelectMembersEx">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="http://www.lyris.com/lmapi" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+  </WSDL:binding>
+  <WSDL:service name="lmapi">
+    <documentation>gSOAP 2.7.7 generated service definition</documentation>
+    <WSDL:port name="lmapiSoap" binding="tns:lmapi">
+      <SOAP:address location="http://127.0.0.1:82/" />
+    </WSDL:port>
+  </WSDL:service>
+</WSDL:definitions>

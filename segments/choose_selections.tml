@@ -1,0 +1,13 @@
+[htmltag::standard_header]
+
+<form action="choose_selections.tml?[lmcgi::clist_url]" method="post">
+
+    [text::hidden_fields [segments::fields_to_preserve]]
+    [text::hidden_fields page]
+    [segments::choose_selections]
+
+</form>
+
+[htmltag::standard_footer]
+
+

@@ -1,0 +1,5 @@
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\TestTmpFile\TestTmpFile\bin\Debug\TestTmpFile.exe
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\TestTmpFile\TestTmpFile\bin\Debug\TestTmpFile.pdb
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\TestTmpFile\TestTmpFile\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\TestTmpFile\TestTmpFile\obj\x86\Debug\TestTmpFile.exe
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\TestTmpFile\TestTmpFile\obj\x86\Debug\TestTmpFile.pdb

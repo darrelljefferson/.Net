@@ -1,0 +1,28 @@
+[if  { ![security::is_allowed_to_admin_this_subset_id [ncgi::value id [ncgi::value key_field_value 0]]] } { 
+    look::redirect_to_message_page "" "Sorry" "utilities" "[translation::text {You do not have permission to edit this segment:}] [ncgi::value id [ncgi::value key_field_value 0]]"
+}]
+[htmltag::standard_header]
+
+[lyrsql::select_row "SELECT Name_, Desc_ FROM subsets_ WHERE SubsetID_=[lmcgi::value_int id]" results]
+
+<form action="/segments/copy_do.tml?[lmcgi::clist_url]" method=post>
+<INPUT TYPE="hidden" NAME="id" VALUE="[ncgi::value id]">
+
+[look::dialogbox_start "Copy Segment" ]
+
+  <table cellspacing="0" cellpadding="5" border="0" width="[look::dialogbox_content_cell_width]">
+
+    [look::dialogbox_row "Old name" $results(name_)]
+    [look::dialogbox_row "Old description" $results(desc_)]
+    [look::dialogbox_row "New name" [subst {<input type="text" name="name_" value="[text::createCopyOfTitle $results(name_)]" size="60">}]]
+    [look::dialogbox_row "New description" [subst {<input type="text" name="desc_" value="[text::createCopyOfDesc $results(desc_)]" size="60">}]]
+    [look::dialogbox_row "Destination list(s)" [mf_html::selectPlain list_ "SIZE=4 MULTIPLE" [security::what_lists_can_admin] [security::current_list]]]
+    
+  </table>
+
+[look::dialogbox_end ]
+[look::dialogbox_buttons "<input [translation::inputTagSubmitImage Copy] name=\"copy_ok\">&nbsp;[translation::button_href "Cancel" "/segments/?sq=[ncgi::encode [ncgi::value sq ALL]]&viewtable_type=[ncgi::value viewtable_type]" ]" ]
+
+</form>
+
+[htmltag::standard_footer]

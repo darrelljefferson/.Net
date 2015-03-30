@@ -1,0 +1,6 @@
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\PheaaDailyReportingExport\PheaaDailyReportingExport\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\PheaaDailyReportingExport\PheaaDailyReportingExport\bin\Debug\PheaaDailyReportingExport.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\PheaaDailyReportingExport\PheaaDailyReportingExport\bin\Debug\PheaaDailyReportingExport.pdb
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\PheaaDailyReportingExport\PheaaDailyReportingExport\bin\Debug\ChilkatDotNet2.dll
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\PheaaDailyReportingExport\PheaaDailyReportingExport\obj\Debug\PheaaDailyReportingExport.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\PheaaDailyReportingExport\PheaaDailyReportingExport\obj\Debug\PheaaDailyReportingExport.pdb

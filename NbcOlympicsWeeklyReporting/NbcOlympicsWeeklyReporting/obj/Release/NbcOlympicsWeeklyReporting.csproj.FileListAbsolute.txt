@@ -1,0 +1,2 @@
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\NbcOlympicsWeeklyReporting\NbcOlympicsWeeklyReporting\obj\Release\NbcOlympicsWeeklyReporting.exe
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\NbcOlympicsWeeklyReporting\NbcOlympicsWeeklyReporting\obj\Release\NbcOlympicsWeeklyReporting.pdb

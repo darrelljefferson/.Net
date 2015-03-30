@@ -1,0 +1,5 @@
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\RegexExample\RegexExample\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\RegexExample\RegexExample\bin\Debug\RegexExample.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\RegexExample\RegexExample\bin\Debug\RegexExample.pdb
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\RegexExample\RegexExample\obj\Debug\RegexExample.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\RegexExample\RegexExample\obj\Debug\RegexExample.pdb

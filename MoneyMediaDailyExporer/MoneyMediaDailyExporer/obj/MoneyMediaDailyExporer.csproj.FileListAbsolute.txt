@@ -1,0 +1,10 @@
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\MoneyMediaDailyExporer\MoneyMediaDailyExporer\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\MoneyMediaDailyExporer\MoneyMediaDailyExporer\bin\Debug\MoneyMediaDailyExporer.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\MoneyMediaDailyExporer\MoneyMediaDailyExporer\bin\Debug\MoneyMediaDailyExporer.pdb
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\MoneyMediaDailyExporer\MoneyMediaDailyExporer\obj\Debug\MoneyMediaDailyExporer.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\MoneyMediaDailyExporer\MoneyMediaDailyExporer\obj\Debug\MoneyMediaDailyExporer.pdb
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\MoneyMediaDailyExporer\MoneyMediaDailyExporer\bin\Release\MoneyMediaDailyExporer.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\MoneyMediaDailyExporer\MoneyMediaDailyExporer\bin\Release\MoneyMediaDailyExporer.pdb
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\MoneyMediaDailyExporer\MoneyMediaDailyExporer\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\MoneyMediaDailyExporer\MoneyMediaDailyExporer\obj\Release\MoneyMediaDailyExporer.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\MoneyMediaDailyExporer\MoneyMediaDailyExporer\obj\Release\MoneyMediaDailyExporer.pdb

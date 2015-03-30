@@ -1,0 +1,57 @@
+[if { ![security::is_allowed_to_admin_this_subset_id [ncgi::value id [ncgi::value key_field_value 0]]] } { 
+    look::redirect_to_message_page "" "Sorry" "utilities" "[translation::text {You do not have permission to edit this segment:}] [ncgi::value id [ncgi::value key_field_value 0]]"
+}]
+
+[htmltag::standard_header]
+
+[lyrsql::select "SELECT Name_, Desc_ FROM subsets_ WHERE SubsetID_=[lmcgi::value_int id]" results 0 0]
+
+[look::dialogbox_start "View Row" ]
+
+  <table cellspacing="0" cellpadding="5" border="0" width="[look::dialogbox_content_cell_width]">
+
+[
+    #set key_given [ncgi::value key]
+    #set correct_key [security::get_crypt_signature [ncgi::value sql]]
+
+    #if {$key_given != $correct_key} {
+    #    look::redirect_to_message_page {} [translation::text "This URL has expired."] "segments" [translation::text "Please go back to the previous page, hit refresh, and try again."]
+    #}
+
+# [MJP] - This is planned code for the docpost mechanism:
+    set DocPost [ncgi::value DocPost]
+    if {$DocPost != ""} {    
+        #ncgi::setValue DocPost [misc::array_get_safe query_data DocPost]
+        set sqllist [lmcgi::Check_for_Doc_Post_Url]
+		#puts "sqllist: '$sqllist'"
+		set sql [lindex $sqllist 1]
+		#puts "sql: '$sql'"
+        ncgi::setValue sql $sql
+		lmcgi::Clear_Doc_Post_Url
+		#puts "That worked!"
+    } else {
+		look::redirect_to_message_page {} [translation::text "This URL has expired."] "segments" [translation::text "Please go back to the previous page, hit refresh, and try again."]
+    }
+	
+
+    catch {unset results}
+    catch {unset arr}
+    lyrsql::select [ncgi::value sql] results 1 [ncgi::value jump] 
+    
+    set html {}
+    foreach column $results(column_names) {
+        append html [look::dialogbox_row $column [lindex $results([string tolower $column]) 0]]
+    }    
+    
+    return $html
+]
+    
+  </table>
+
+[look::dialogbox_end ]
+[look::dialogbox_buttons "[translation::button_href "Ok" "/segments/test.tml?id=[ncgi::value id]&count=[ncgi::value count]&max=[ncgi::value max]&skip=[ncgi::value skip]" ]" ]
+<br>
+</form>
+
+[htmltag::standard_footer]
+

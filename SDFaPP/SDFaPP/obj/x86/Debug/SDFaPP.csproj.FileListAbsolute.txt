@@ -1,0 +1,6 @@
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\SDFaPP\SDFaPP\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\SDFaPP\SDFaPP\bin\Debug\SDFaPP.exe.config
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\SDFaPP\SDFaPP\bin\Debug\SDFaPP.exe
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\SDFaPP\SDFaPP\bin\Debug\SDFaPP.pdb
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\SDFaPP\SDFaPP\obj\x86\Debug\SDFaPP.exe
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\SDFaPP\SDFaPP\obj\x86\Debug\SDFaPP.pdb

@@ -1,0 +1,9 @@
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\AMAListConsolidate\AMAListConsolidate\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\AMAListConsolidate\AMAListConsolidate\bin\Debug\AMAListConsolidate.exe
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\AMAListConsolidate\AMAListConsolidate\bin\Debug\AMAListConsolidate.pdb
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\AMAListConsolidate\AMAListConsolidate\obj\x86\Debug\AMAListConsolidate.exe
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\AMAListConsolidate\AMAListConsolidate\obj\x86\Debug\AMAListConsolidate.pdb
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\AMAListConsolidate\AMAListConsolidate\bin\Debug\AMAListConsolidate.exe.config
+E:\Projects\AMAListConsolidate\AMAListConsolidate\bin\Debug\AMAListConsolidate.exe.config
+E:\Projects\AMAListConsolidate\AMAListConsolidate\obj\x86\Debug\AMAListConsolidate.exe
+E:\Projects\AMAListConsolidate\AMAListConsolidate\obj\x86\Debug\AMAListConsolidate.pdb

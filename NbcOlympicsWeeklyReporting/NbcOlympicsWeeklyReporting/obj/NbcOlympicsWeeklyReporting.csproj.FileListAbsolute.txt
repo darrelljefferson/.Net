@@ -1,0 +1,11 @@
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\NbcOlympicsWeeklyReporting\NbcOlympicsWeeklyReporting\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\NbcOlympicsWeeklyReporting\NbcOlympicsWeeklyReporting\bin\Debug\NbcOlympicsWeeklyReporting.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\NbcOlympicsWeeklyReporting\NbcOlympicsWeeklyReporting\bin\Debug\NbcOlympicsWeeklyReporting.pdb
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\NbcOlympicsWeeklyReporting\NbcOlympicsWeeklyReporting\obj\Debug\NbcOlympicsWeeklyReporting.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\NbcOlympicsWeeklyReporting\NbcOlympicsWeeklyReporting\obj\Debug\NbcOlympicsWeeklyReporting.pdb
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\NbcOlympicsWeeklyReporting\NbcOlympicsWeeklyReporting\bin\Release\NbcOlympicsWeeklyReporting.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\NbcOlympicsWeeklyReporting\NbcOlympicsWeeklyReporting\bin\Release\NbcOlympicsWeeklyReporting.pdb
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\NbcOlympicsWeeklyReporting\NbcOlympicsWeeklyReporting\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\NbcOlympicsWeeklyReporting\NbcOlympicsWeeklyReporting\obj\Release\NbcOlympicsWeeklyReporting.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\NbcOlympicsWeeklyReporting\NbcOlympicsWeeklyReporting\obj\Release\NbcOlympicsWeeklyReporting.pdb
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\NbcOlympicsWeeklyReporting\NbcOlympicsWeeklyReporting\bin\Release\ChilkatDotNet2.dll

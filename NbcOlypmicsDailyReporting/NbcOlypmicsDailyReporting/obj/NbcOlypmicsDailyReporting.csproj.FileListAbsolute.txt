@@ -1,0 +1,11 @@
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\NbcOlypmicsDailyReporting\NbcOlypmicsDailyReporting\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\NbcOlypmicsDailyReporting\NbcOlypmicsDailyReporting\bin\Debug\NbcOlypmicsDailyReporting.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\NbcOlypmicsDailyReporting\NbcOlypmicsDailyReporting\bin\Debug\NbcOlypmicsDailyReporting.pdb
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\NbcOlypmicsDailyReporting\NbcOlypmicsDailyReporting\obj\Debug\NbcOlypmicsDailyReporting.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\NbcOlypmicsDailyReporting\NbcOlypmicsDailyReporting\obj\Debug\NbcOlypmicsDailyReporting.pdb
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\NbcOlypmicsDailyReporting\NbcOlypmicsDailyReporting\bin\Release\NbcOlypmicsDailyReporting.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\NbcOlypmicsDailyReporting\NbcOlypmicsDailyReporting\bin\Release\NbcOlypmicsDailyReporting.pdb
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\NbcOlypmicsDailyReporting\NbcOlypmicsDailyReporting\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\NbcOlypmicsDailyReporting\NbcOlypmicsDailyReporting\obj\Release\NbcOlypmicsDailyReporting.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\NbcOlypmicsDailyReporting\NbcOlypmicsDailyReporting\obj\Release\NbcOlypmicsDailyReporting.pdb
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\NbcOlypmicsDailyReporting\NbcOlypmicsDailyReporting\bin\Release\ChilkatDotNet2.dll

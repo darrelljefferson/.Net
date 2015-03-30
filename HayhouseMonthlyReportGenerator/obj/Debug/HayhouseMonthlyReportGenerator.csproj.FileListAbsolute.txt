@@ -1,0 +1,11 @@
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\HayhouseMonthlyReportGenerator\HayhouseMonthlyReportGenerator\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\HayhouseMonthlyReportGenerator\HayhouseMonthlyReportGenerator\bin\Debug\HayhouseMonthlyReportGenerator.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\HayhouseMonthlyReportGenerator\HayhouseMonthlyReportGenerator\bin\Debug\HayhouseMonthlyReportGenerator.pdb
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\HayhouseMonthlyReportGenerator\HayhouseMonthlyReportGenerator\bin\Debug\ChilkatDotNet2.dll
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\HayhouseMonthlyReportGenerator\HayhouseMonthlyReportGenerator\obj\Debug\HayhouseMonthlyReportGenerator.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\HayhouseMonthlyReportGenerator\HayhouseMonthlyReportGenerator\obj\Debug\HayhouseMonthlyReportGenerator.pdb
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\HayhouseMonthlyReportGenerator\obj\Debug\HayhouseMonthlyReportGenerator.exe
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\HayhouseMonthlyReportGenerator\obj\Debug\HayhouseMonthlyReportGenerator.pdb
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\HayhouseMonthlyReportGenerator\bin\Debug\HayhouseMonthlyReportGenerator.exe
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\HayhouseMonthlyReportGenerator\bin\Debug\HayhouseMonthlyReportGenerator.pdb
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\HayhouseMonthlyReportGenerator\obj\Debug\ResolveAssemblyReference.cache

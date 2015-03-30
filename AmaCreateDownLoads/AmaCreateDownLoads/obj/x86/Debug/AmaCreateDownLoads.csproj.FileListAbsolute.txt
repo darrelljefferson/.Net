@@ -1,0 +1,6 @@
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\AmaCreateDownLoads\AmaCreateDownLoads\bin\Debug\AmaCreateDownLoads.exe.config
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\AmaCreateDownLoads\AmaCreateDownLoads\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\AmaCreateDownLoads\AmaCreateDownLoads\bin\Debug\AmaCreateDownLoads.exe
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\AmaCreateDownLoads\AmaCreateDownLoads\bin\Debug\AmaCreateDownLoads.pdb
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\AmaCreateDownLoads\AmaCreateDownLoads\obj\x86\Debug\AmaCreateDownLoads.exe
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\AmaCreateDownLoads\AmaCreateDownLoads\obj\x86\Debug\AmaCreateDownLoads.pdb

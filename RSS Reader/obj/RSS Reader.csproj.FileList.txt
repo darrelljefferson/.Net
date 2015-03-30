@@ -1,0 +1,8 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\RSS_Reader.frmMain.resources
+obj\Debug\RSS_Reader.Properties.Resources.resources
+obj\Debug\RSS Reader.csproj.GenerateResource.Cache
+bin\Debug\RSS Reader.exe
+bin\Debug\RSS Reader.pdb
+obj\Debug\RSS Reader.exe
+obj\Debug\RSS Reader.pdb

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">
+  <asmv1:assemblyIdentity name="MoneyMediaCSVParser.exe" version="1.0.0.0" publicKeyToken="481585638cbfb68e" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="MoneyMediaCSVParser" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="MoneyMediaCSVParser.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MoneyMediaCSVParser.exe" size="21504">
+      <assemblyIdentity name="MoneyMediaCSVParser" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>SmoXDiX8OaMZegub3kzKI3gdIg4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="MoneyMediaCSVParser.exe.config" size="460">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ZjTFYLx50BkNS2fr7qe7O2XwEhA=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=CORP\djefferson" issuerKeyHash="e2f83cbb4d429e6cde93122710e51721f86f1d71" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>uHahZABg7EiBuFZNbHys2otXGH8=</DigestValue></Reference></SignedInfo><SignatureValue>eufqePpijtsk59GJz1qerWVfAbZ4XOML450UBfgyYm3+cXwJv/2Z4gBAkvbXPYJcLOQiPo6MAU2/DOpnZIjC2do2bmLRIwEiZmWZ65JXftiugUeVYyCKU5lE5Q2zYM302RiCQz1AeQJx/clyoGa71Ii0Hwhq6sDEJm8vLyIWoOQ=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>tidlbo8AS+fOhYDrtF1XI7hpVK2cudn7HiknIZ7AjiCD3WhlscacOvVexXI83mSA3E/rKAm9W0oPixdv+JLJWw/9R/V7WKFGD1DkD9K+SrQrUEKntwwr/+IIudaQZN14t8JZXsTcMiuziVQnZIG+kFsf5WTofW8gWTlAEtzKGEs=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="7f18578bdaac7c6c4d56b88148ec600064a176b8" Description="" Url=""><as:assemblyIdentity name="MoneyMediaCSVParser.exe" version="1.0.0.0" publicKeyToken="481585638cbfb68e" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=CORP\djefferson</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>v9V5BLzRM7JLIrTt8kuLV3iT1BQ=</DigestValue></Reference></SignedInfo><SignatureValue>lL2cUUKF843LclzFdHGYOJSX+J9Z3ofuJ9R65XFjqMrOni3B25R7PaMceo2SW3XFSOCSjiraw5fFJGD68w82nBxG4BRSE5QKb/ldvk8R9QJ30o1IAMUz1FI8xCFf6ybnPrPn45YlSh0uIGrJCN56zovVEl+TDEMmcfl3Lb1GNWY=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>tidlbo8AS+fOhYDrtF1XI7hpVK2cudn7HiknIZ7AjiCD3WhlscacOvVexXI83mSA3E/rKAm9W0oPixdv+JLJWw/9R/V7WKFGD1DkD9K+SrQrUEKntwwr/+IIudaQZN14t8JZXsTcMiuziVQnZIG+kFsf5WTofW8gWTlAEtzKGEs=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBzTCCATqgAwIBAgIQJ/1V8hGbS6ZB2PFl58jl5jAJBgUrDgMCHQUAMCkxJzAlBgNVBAMeHgBDAE8AUgBQAFwAZABqAGUAZgBmAGUAcgBzAG8AbjAeFw0xMTA1MjYwNzAxMzNaFw0xMjA1MjUxMzAxMzNaMCkxJzAlBgNVBAMeHgBDAE8AUgBQAFwAZABqAGUAZgBmAGUAcgBzAG8AbjCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAtidlbo8AS+fOhYDrtF1XI7hpVK2cudn7HiknIZ7AjiCD3WhlscacOvVexXI83mSA3E/rKAm9W0oPixdv+JLJWw/9R/V7WKFGD1DkD9K+SrQrUEKntwwr/+IIudaQZN14t8JZXsTcMiuziVQnZIG+kFsf5WTofW8gWTlAEtzKGEsCAwEAATAJBgUrDgMCHQUAA4GBAALoBUQmkHoiixLUMH+k9qkCd/kuYS9aDPBqxKOM5iapd6s1r5SS1pIkxuXD5VZ0lfnOcRjg0aZBq36M+aB5YDDGIqdeLQShUhFimVnq5ZeItX/JGNVsw1AGine6HbnwkNVNkkOmgZk2G1ATzPnkCKOqdryLGMrowcdwM4ZIgocH</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

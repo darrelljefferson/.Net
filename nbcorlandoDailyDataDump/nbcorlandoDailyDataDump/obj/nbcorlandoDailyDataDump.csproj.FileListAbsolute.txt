@@ -1,0 +1,10 @@
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\nbcorlandoDailyDataDump\nbcorlandoDailyDataDump\bin\Debug\nbcorlandoDailyDataDump.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\nbcorlandoDailyDataDump\nbcorlandoDailyDataDump\bin\Debug\nbcorlandoDailyDataDump.pdb
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\nbcorlandoDailyDataDump\nbcorlandoDailyDataDump\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\nbcorlandoDailyDataDump\nbcorlandoDailyDataDump\obj\Debug\nbcorlandoDailyDataDump.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\nbcorlandoDailyDataDump\nbcorlandoDailyDataDump\obj\Debug\nbcorlandoDailyDataDump.pdb
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\nbcorlandoDailyDataDump\nbcorlandoDailyDataDump\bin\Release\nbcorlandoDailyDataDump.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\nbcorlandoDailyDataDump\nbcorlandoDailyDataDump\bin\Release\nbcorlandoDailyDataDump.pdb
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\nbcorlandoDailyDataDump\nbcorlandoDailyDataDump\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\nbcorlandoDailyDataDump\nbcorlandoDailyDataDump\obj\Release\nbcorlandoDailyDataDump.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\nbcorlandoDailyDataDump\nbcorlandoDailyDataDump\obj\Release\nbcorlandoDailyDataDump.pdb

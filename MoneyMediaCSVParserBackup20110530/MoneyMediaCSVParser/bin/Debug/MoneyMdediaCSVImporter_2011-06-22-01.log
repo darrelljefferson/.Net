@@ -1,0 +1,52 @@
+
+
+MoneyMedia Started at Wednesday, June 22, 2011 10:33:01 PM
+2011-06-22 22:33:01 - #-----------------------------------------------------------------------------
+2011-06-22 22:33:01 - #
+2011-06-22 22:33:01 - #
+2011-06-22 22:33:01 - #-----------------------------------------------------------------------------
+2011-06-22 22:33:01 - DBNAME=lyris
+2011-06-22 22:33:01 - DBNAME=lyris
+2011-06-22 22:33:01 - HOST=DJEFFERSON-T61\LYRIS
+2011-06-22 22:33:01 - HOST=DJEFFERSON-T61\LYRIS
+2011-06-22 22:33:01 - USERID=CORP/Djefferson
+2011-06-22 22:33:01 - USERID=CORP/Djefferson
+2011-06-22 22:33:01 - PASSWORD=magnolia01
+2011-06-22 22:33:01 - PASSWORD=magnolia01
+2011-06-22 22:33:01 - # ----------------------------- Test Lyris ListManager Server ------------------------
+2011-06-22 22:33:01 - #DBNAME=lm10xtest
+2011-06-22 22:33:01 - #HOST=db18.hosting.lyris.net
+2011-06-22 22:33:01 - #USERID=lm10xtest
+2011-06-22 22:33:01 - #PASSWORD=lm10testytesty
+2011-06-22 22:33:01 - 
+2011-06-22 22:33:01 - 
+2011-06-22 22:33:01 - 
+2011-06-22 22:33:01 - 
+2011-06-22 22:33:01 - DIRPATH=c:\projects\moneymedia\data\
+2011-06-22 22:33:01 - DIRPATH=c:\projects\moneymedia\data\
+2011-06-22 22:33:01 - ERRPATH=c:\temp\
+2011-06-22 22:33:01 - ERRPATH=c:\temp\
+2011-06-22 22:33:01 - LOGPATH=c:\temp\
+2011-06-22 22:33:01 - LOGPATH=c:\temp\
+2011-06-22 22:33:01 - EXTENSION=csv
+2011-06-22 22:33:01 - EXTENSION=csv
+2011-06-22 22:33:01 - DUPSPATH=c:\temp\
+2011-06-22 22:33:01 - DUPSPATH=c:\temp\
+2011-06-22 22:33:05 - Error on Connection System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'CORP/Djefferson'.
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, TimeoutTimer timeout, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at MoneyMediaCSVParser.SQLInserter.Connect(String host, String dbname, String userid, String password) in C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\MoneyMediaCSVParserBackup20110530\MoneyMediaCSVParser\SQLInserter.cs:line 108

@@ -1,0 +1,7 @@
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\TestSFTP\TestSFTP\bin\Debug\TestSFTP.exe
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\TestSFTP\TestSFTP\bin\Debug\TestSFTP.pdb
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\TestSFTP\TestSFTP\bin\Debug\ChilkatDotNet2.dll
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\TestSFTP\TestSFTP\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\TestSFTP\TestSFTP\obj\x86\Debug\TestSFTP.exe
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\TestSFTP\TestSFTP\obj\x86\Debug\TestSFTP.pdb
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\TestSFTP\TestSFTP\bin\Debug\TestSFTP.exe.config

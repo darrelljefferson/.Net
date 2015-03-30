@@ -1,0 +1,25 @@
+[if { ![security::is_allowed_to_admin_this_subset_id [ncgi::value id [ncgi::value key_field_value 0]]] } { 
+    look::redirect_to_message_page "" "Sorry" "utilities" "[translation::text {You do not have permission to edit this segment:}] [ncgi::value id [ncgi::value key_field_value 0]]"
+}]
+[htmltag::html_on]
+[
+lyrsql::update2 inmail_ [list SubsetID_ {}] "SubsetID_=[lmcgi::value_int id]"
+lyrsql::update2 outmail_ [list SubsetID_ {}] "SubsetID_=[lmcgi::value_int id]"
+lyrsql::update2 messages_ [list SubsetID_ {}] "SubsetID_=[lmcgi::value_int id]"
+# we don't have to update moderate because if there were any references there, the user wouldn't be allowed to get here.
+
+lyrsql::delete subsets_ "SubsetID_=[lmcgi::value_int id]"
+look::message_page "/segments/?sq=[ncgi::encode [ncgi::value sq ALL]]&viewtable_type=[ncgi::value viewtable_type]" [translation::text "Deleted Segment"] "segments"
+]
+
+[
+# if lists_.DefaultSubsetID_ is the same as the subsetid deleted, change lists_.DefaultSubsetID_ back to 0 (all of list)
+if { [lyrsql::select_value "SELECT DefaultSubsetID_ FROM lists_
+      WHERE DefaultSubsetID_=[lmcgi::value_int id] 
+      AND Name_=[lyrsql::quote [security::current_list]]"] != "" } {
+   set replacementvalue(DefaultSubsetID_) 0
+   lyrsql::update "lists_" replacementvalue "DefaultSubsetID_=[lmcgi::value_int id] and Name_=[lyrsql::quote [security::current_list]]"
+}
+]
+
+

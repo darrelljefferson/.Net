@@ -1,0 +1,34 @@
+
+
+MoneyMedia Started at Wednesday, June 22, 2011 4:26:10 PM
+2011-06-22 16:26:10 - #-----------------------------------------------------------------------------
+2011-06-22 16:26:10 - #
+2011-06-22 16:26:10 - #
+2011-06-22 16:26:10 - #-----------------------------------------------------------------------------
+2011-06-22 16:26:10 - #DBNAME=lyris
+2011-06-22 16:26:10 - #HOST=DJEFFERSON-T61\LYRIS
+2011-06-22 16:26:10 - #USERID=CORP/Djefferson
+2011-06-22 16:26:10 - #PASSWORD=magnolia01
+2011-06-22 16:26:10 - # ----------------------------- Test Lyris ListManager Server ------------------------
+2011-06-22 16:26:10 - DBNAME=lm10xtest
+2011-06-22 16:26:10 - DBNAME=lm10xtest
+2011-06-22 16:26:10 - HOST=db18.hosting.lyris.net
+2011-06-22 16:26:10 - HOST=db18.hosting.lyris.net
+2011-06-22 16:26:10 - USERID=lm10xtest
+2011-06-22 16:26:10 - USERID=lm10xtest
+2011-06-22 16:26:10 - PASSWORD=lm10testytesty
+2011-06-22 16:26:10 - PASSWORD=lm10testytesty
+2011-06-22 16:26:10 - 
+2011-06-22 16:26:10 - 
+2011-06-22 16:26:10 - 
+2011-06-22 16:26:10 - 
+2011-06-22 16:26:10 - DIRPATH=c:\projects\moneymedia\data\
+2011-06-22 16:26:10 - DIRPATH=c:\projects\moneymedia\data\
+2011-06-22 16:26:10 - ERRPATH=c:\temp\
+2011-06-22 16:26:10 - ERRPATH=c:\temp\
+2011-06-22 16:26:10 - LOGPATH=c:\temp\
+2011-06-22 16:26:10 - LOGPATH=c:\temp\
+2011-06-22 16:26:10 - EXTENSION=csv
+2011-06-22 16:26:10 - EXTENSION=csv
+2011-06-22 16:26:10 - DUPSPATH=c:\temp\
+2011-06-22 16:26:10 - DUPSPATH=c:\temp\

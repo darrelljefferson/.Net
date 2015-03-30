@@ -1,0 +1,7 @@
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\testdate\testdate\bin\Debug\testdate.exe
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\testdate\testdate\bin\Debug\testdate.pdb
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\testdate\testdate\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\testdate\testdate\obj\x86\Debug\testdate.exe
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\testdate\testdate\obj\x86\Debug\testdate.pdb
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\testdate\testdate\bin\Debug\ChilkatDotNet2.dll
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\testdate\testdate\bin\Debug\testdate.exe.config

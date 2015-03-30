@@ -1,0 +1,12 @@
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\PheaaUploadAndFireTriggerParser\PheaaUploadAndFireTriggerParser\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\PheaaUploadAndFireTriggerParser\PheaaUploadAndFireTriggerParser\bin\Debug\PheaaUploadAndFireTriggerParser.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\PheaaUploadAndFireTriggerParser\PheaaUploadAndFireTriggerParser\bin\Debug\PheaaUploadAndFireTriggerParser.pdb
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\PheaaUploadAndFireTriggerParser\PheaaUploadAndFireTriggerParser\bin\Debug\ChilkatDotNet2.dll
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\PheaaUploadAndFireTriggerParser\PheaaUploadAndFireTriggerParser\obj\Debug\PheaaUploadAndFireTriggerParser.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\PheaaUploadAndFireTriggerParser\PheaaUploadAndFireTriggerParser\obj\Debug\PheaaUploadAndFireTriggerParser.pdb
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\PheaaUploadAndFireTriggerParser\PheaaUploadAndFireTriggerParser\obj\Debug\PheaaUploadAndFireTriggerParser.exe
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\PheaaUploadAndFireTriggerParser\PheaaUploadAndFireTriggerParser\obj\Debug\PheaaUploadAndFireTriggerParser.pdb
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\PheaaUploadAndFireTriggerParser\PheaaUploadAndFireTriggerParser\bin\Debug\PheaaUploadAndFireTriggerParser.exe
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\PheaaUploadAndFireTriggerParser\PheaaUploadAndFireTriggerParser\bin\Debug\PheaaUploadAndFireTriggerParser.pdb
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\PheaaUploadAndFireTriggerParser\PheaaUploadAndFireTriggerParser\bin\Debug\ChilkatDotNet2.dll
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\PheaaUploadAndFireTriggerParser\PheaaUploadAndFireTriggerParser\obj\Debug\ResolveAssemblyReference.cache

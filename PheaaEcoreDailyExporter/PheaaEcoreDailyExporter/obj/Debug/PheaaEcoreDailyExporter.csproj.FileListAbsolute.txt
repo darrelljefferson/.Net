@@ -1,0 +1,14 @@
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\PheaaEcoreDailyExporter\PheaaEcoreDailyExporter\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\PheaaEcoreDailyExporter\PheaaEcoreDailyExporter\bin\Debug\PheaaEcoreDailyExporter.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\PheaaEcoreDailyExporter\PheaaEcoreDailyExporter\bin\Debug\PheaaEcoreDailyExporter.pdb
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\PheaaEcoreDailyExporter\PheaaEcoreDailyExporter\bin\Debug\ChilkatDotNet2.dll
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\PheaaEcoreDailyExporter\PheaaEcoreDailyExporter\obj\Debug\PheaaEcoreDailyExporter.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\PheaaEcoreDailyExporter\PheaaEcoreDailyExporter\obj\Debug\PheaaEcoreDailyExporter.pdb
+Z:\PUBLIC\PheaaEcoreDailyExporter\PheaaEcoreDailyExporter\obj\Debug\PheaaEcoreDailyExporter.exe
+Z:\PUBLIC\PheaaEcoreDailyExporter\PheaaEcoreDailyExporter\obj\Debug\PheaaEcoreDailyExporter.pdb
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\PheaaEcoreDailyExporter\PheaaEcoreDailyExporter\obj\Debug\PheaaEcoreDailyExporter.exe
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\PheaaEcoreDailyExporter\PheaaEcoreDailyExporter\obj\Debug\PheaaEcoreDailyExporter.pdb
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\PheaaEcoreDailyExporter\PheaaEcoreDailyExporter\bin\Debug\PheaaEcoreDailyExporter.exe
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\PheaaEcoreDailyExporter\PheaaEcoreDailyExporter\bin\Debug\PheaaEcoreDailyExporter.pdb
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\PheaaEcoreDailyExporter\PheaaEcoreDailyExporter\bin\Debug\ChilkatDotNet2.dll
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\PheaaEcoreDailyExporter\PheaaEcoreDailyExporter\obj\Debug\ResolveAssemblyReference.cache

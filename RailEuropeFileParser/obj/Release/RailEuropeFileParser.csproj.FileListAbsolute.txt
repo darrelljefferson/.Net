@@ -1,0 +1,6 @@
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\RailEuropeFileParser\RailEuropeFileParser\bin\Release\RailEuropeFileParser.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\RailEuropeFileParser\RailEuropeFileParser\bin\Release\RailEuropeFileParser.pdb
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\RailEuropeFileParser\RailEuropeFileParser\bin\Release\ChilkatDotNet2.dll
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\RailEuropeFileParser\RailEuropeFileParser\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\RailEuropeFileParser\RailEuropeFileParser\obj\Release\RailEuropeFileParser.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\RailEuropeFileParser\RailEuropeFileParser\obj\Release\RailEuropeFileParser.pdb

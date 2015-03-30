@@ -1,0 +1,116 @@
+[if { ![security::is_allowed_to_admin_this_subset_id [ncgi::value id [ncgi::value key_field_value 0]]] } { 
+    look::redirect_to_message_page "" "Sorry" "utilities" "[translation::text {You do not have permission to edit this segment:}] [ncgi::value id [ncgi::value key_field_value 0]]"
+}
+
+
+if { [info exists inmailresults] } { unset inmailresults }
+if { [info exists moderateresults] } { unset moderateresults }
+if { [info exists outmailresults] } { unset outmailresults }
+if { [info exists messagesresults] } { unset messagesresults }
+
+lyrsql::select "select MessageID_, Title_, Status_ from inmail_ where SubsetID_=[lmcgi::value_int id]" inmailresults
+lyrsql::select "select MessageID_, Title_, Status_ from moderate_ where SubsetID_=[lmcgi::value_int id]" moderateresults
+lyrsql::select "select MessageID_, Title_ from outmail_ where SubsetID_=[lmcgi::value_int id]" outmailresults
+lyrsql::select "select MessageID_, Title_ from messages_ where SubsetID_=[lmcgi::value_int id]" messagesresults
+
+set deleteablereferences {}
+set cantdeletereferences {}
+set messagesreferences {}
+
+for { set i 0 } { $i < $inmailresults(num_rows) } { incr i } {
+    set MessageID [lindex $inmailresults(messageid_) $i]
+    set Title [lindex $inmailresults(title_) $i]
+    set Status [lindex $inmailresults(status_) $i]
+
+    if { $Status == "done" } {
+        lappend deleteablereferences [subst [translation::text {Inmail ID: $MessageID, Title: $Title, Status: $Status}]]
+    } else {
+        lappend cantdeletereferences [subst [translation::text {Inmail ID: $MessageID, Title: $Title, Status: $Status}]]
+    }
+}
+
+for { set i 0 } { $i < $moderateresults(num_rows) } { incr i } {
+    set MessageID [lindex $moderateresults(messageid_) $i]
+    set Title [lindex $moderateresults(title_) $i]
+    set Status [lindex $moderateresults(status_) $i]
+    
+    lappend cantdeletereferences [subst [translation::text {Moderation ID: $MessageID, Title: $Title, Status: $Status}]]
+}
+
+for { set i 0 } { $i < $messagesresults(num_rows) } { incr i } {
+    set MessageID [lindex $messagesresults(messageid_) $i]
+    set Title [lindex $messagesresults(title_) $i]
+
+    lappend messagesreferences [subst [translation::text {Archive ID: $MessageID, Title: $Title}]]
+}
+
+for { set i 0 } { $i < $outmailresults(num_rows) } { incr i } {
+    set MessageID [lindex $outmailresults(messageid_) $i]
+    set Title [lindex $outmailresults(title_) $i]
+    if { [lyrsql::select_value "SELECT count(*) FROM lyrActiveRecips WHERE MailingID = $MessageID"] == 0 } {
+        lappend deleteablereferences [subst [translation::text {Outmail ID: $MessageID, Title: $Title}]]
+    } else {
+        lappend cantdeletereferences [subst [translation::text {Outmail ID: $MessageID, Title: $Title}]]
+    }
+}
+
+]
+
+[htmltag::standard_header]
+
+[lyrsql::select_row "SELECT Name_, Desc_ FROM subsets_ WHERE SubsetID_=[lmcgi::value_int id]" results]
+
+[look::dialogbox_start "Delete Segment" ]
+
+    <table cellspacing="0" cellpadding="5" border="0" width="[look::dialogbox_content_cell_width]">
+
+        [look::dialogbox_row "Name" $results(name_)]
+        [look::dialogbox_row "Description" $results(desc_)]
+[
+if { [llength $cantdeletereferences] > 0 } {
+return [look::dialogbox_row "" "<b>[translation::text {This segment cannot be deleted because it is referenced by the following active mailings:}]</b>"]
+} elseif { [llength $deleteablereferences] > 0 } {
+return [look::dialogbox_row "" "<b>[translation::text {Are you sure you want to delete this segment?}]<BR>[translation::text {The following references to this segment will be removed:}]</b>"]
+} else {
+return [look::dialogbox_row "" "<b>[translation::text {Are you sure you want to delete this segment?}]</b>"]
+}
+]
+
+[
+if { [llength $cantdeletereferences] > 0 } {
+return [look::dialogbox_row "" [join $cantdeletereferences "<BR>\n"]]
+} elseif { [llength $deleteablereferences] > 0 } {
+return [look::dialogbox_row "" [join $deleteablereferences "<BR>\n"]]
+} else {
+return ""
+}
+]
+
+[
+if { [llength $cantdeletereferences] == 0 && [llength $messagesreferences] > 0 } {
+set thisresult [look::dialogbox_row "" "<b>[translation::text {The following archived messages reference this segment. If you remove these references, crosspost merging against these messages will not work properly.}]</b>"] 
+append thisresult "\n"
+append thisresult [look::dialogbox_row "" [join $messagesreferences "<BR>\n"]]
+
+
+}
+
+]
+
+
+
+    </table>
+
+[look::dialogbox_end ]
+[
+
+if { [llength $cantdeletereferences] > 0 } {
+    return [look::dialogbox_buttons "[translation::button_href "Cancel" "/segments/?sq=[ncgi::encode [ncgi::value sq ALL]]&viewtable_type=[ncgi::value viewtable_type]" ]"] 
+} else {
+    return [look::dialogbox_buttons "[translation::button_href "Delete" "/segments/delete_do.tml?id=[ncgi::value id]&sq=[ncgi::encode [ncgi::value sq ALL]]&viewtable_type=[ncgi::value viewtable_type]" ]&nbsp;[translation::button_href "Cancel" "/segments/?sq=[ncgi::encode [ncgi::value sq ALL]]&viewtable_type=[ncgi::value viewtable_type]" ]"] 
+}
+
+]
+
+[htmltag::standard_footer]
+

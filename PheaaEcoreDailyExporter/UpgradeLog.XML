@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="PheaaEcoreDailyExporter">
+</Property><Property Name="Solution File" Value="Z:\PUBLIC\PheaaEcoreDailyExporter\PheaaEcoreDailyExporter.sln">
+</Property><Property Name="User Options File" Value="Z:\PUBLIC\PheaaEcoreDailyExporter\PheaaEcoreDailyExporter.suo">
+</Property><Property Name="Date" Value="Monday, May 16, 2011">
+</Property><Property Name="Time" Value="10:23 AM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="PheaaEcoreDailyExporter.sln" Description="File successfully backed up as Z:\PUBLIC\PheaaEcoreDailyExporter\Backup\PheaaEcoreDailyExporter.sln">
+</Event><Event ErrorLevel="0" Project="" Source="PheaaEcoreDailyExporter.suo" Description="File successfully backed up as Z:\PUBLIC\PheaaEcoreDailyExporter\Backup\PheaaEcoreDailyExporter.suo">
+</Event><Event ErrorLevel="0" Project="PheaaEcoreDailyExporter" Source="PheaaEcoreDailyExporter\PheaaEcoreDailyExporter.csproj" Description="Project file successfully backed up as Z:\PUBLIC\PheaaEcoreDailyExporter\Backup\PheaaEcoreDailyExporter\PheaaEcoreDailyExporter.csproj">
+</Event><Event ErrorLevel="0" Project="PheaaEcoreDailyExporter" Source="PheaaEcoreDailyExporter\Log.cs" Description="File successfully backed up as Z:\PUBLIC\PheaaEcoreDailyExporter\Backup\PheaaEcoreDailyExporter\Log.cs">
+</Event><Event ErrorLevel="0" Project="PheaaEcoreDailyExporter" Source="PheaaEcoreDailyExporter\Program.cs" Description="File successfully backed up as Z:\PUBLIC\PheaaEcoreDailyExporter\Backup\PheaaEcoreDailyExporter\Program.cs">
+</Event><Event ErrorLevel="0" Project="PheaaEcoreDailyExporter" Source="PheaaEcoreDailyExporter\Properties\AssemblyInfo.cs" Description="File successfully backed up as Z:\PUBLIC\PheaaEcoreDailyExporter\Backup\PheaaEcoreDailyExporter\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="PheaaEcoreDailyExporter" Source="PheaaEcoreDailyExporter\ReportBuilder.cs" Description="File successfully backed up as Z:\PUBLIC\PheaaEcoreDailyExporter\Backup\PheaaEcoreDailyExporter\ReportBuilder.cs">
+</Event><Event ErrorLevel="0" Project="PheaaEcoreDailyExporter" Source="PheaaEcoreDailyExporter\SFTP.cs" Description="File successfully backed up as Z:\PUBLIC\PheaaEcoreDailyExporter\Backup\PheaaEcoreDailyExporter\SFTP.cs">
+</Event><Event ErrorLevel="0" Project="PheaaEcoreDailyExporter" Source="PheaaEcoreDailyExporter\utility.cs" Description="File successfully backed up as Z:\PUBLIC\PheaaEcoreDailyExporter\Backup\PheaaEcoreDailyExporter\utility.cs">
+</Event><Event ErrorLevel="0" Project="PheaaEcoreDailyExporter" Source="PheaaEcoreDailyExporter\PheaaEcoreDailyExporter.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="PheaaEcoreDailyExporter" Source="PheaaEcoreDailyExporter\PheaaEcoreDailyExporter.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="PheaaEcoreDailyExporter.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="PheaaEcoreDailyExporter.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="PheaaEcoreDailyExporter" Source="PheaaEcoreDailyExporter\PheaaEcoreDailyExporter.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

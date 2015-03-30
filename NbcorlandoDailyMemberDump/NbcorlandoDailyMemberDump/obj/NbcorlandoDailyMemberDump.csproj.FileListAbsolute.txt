@@ -1,0 +1,10 @@
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\NbcorlandoDailyMemberDump\NbcorlandoDailyMemberDump\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\NbcorlandoDailyMemberDump\NbcorlandoDailyMemberDump\bin\Debug\NbcorlandoDailyMemberDump.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\NbcorlandoDailyMemberDump\NbcorlandoDailyMemberDump\bin\Debug\NbcorlandoDailyMemberDump.pdb
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\NbcorlandoDailyMemberDump\NbcorlandoDailyMemberDump\obj\Debug\NbcorlandoDailyMemberDump.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\NbcorlandoDailyMemberDump\NbcorlandoDailyMemberDump\obj\Debug\NbcorlandoDailyMemberDump.pdb
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\NbcorlandoDailyMemberDump\NbcorlandoDailyMemberDump\bin\Release\NbcorlandoDailyMemberDump.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\NbcorlandoDailyMemberDump\NbcorlandoDailyMemberDump\bin\Release\NbcorlandoDailyMemberDump.pdb
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\NbcorlandoDailyMemberDump\NbcorlandoDailyMemberDump\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\NbcorlandoDailyMemberDump\NbcorlandoDailyMemberDump\obj\Release\NbcorlandoDailyMemberDump.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2005\Projects\NbcorlandoDailyMemberDump\NbcorlandoDailyMemberDump\obj\Release\NbcorlandoDailyMemberDump.pdb

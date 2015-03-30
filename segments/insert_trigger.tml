@@ -1,0 +1,18 @@
+[if { ![security::is_allowed_to_admin_this_subset_id [ncgi::value id [ncgi::value key_field_value 0]]] } { 
+    look::redirect_to_message_page "" "Sorry" "utilities" "[translation::text {You do not have permission to edit this segment:}] [ncgi::value id [ncgi::value key_field_value 0]]"
+}]
+[htmltag::standard_header]
+
+<form action="insert_trigger.tml?[lmcgi::clist_url]" method="post">
+    [::segments::insert_trigger]
+    
+    [text::hidden_fields {page type current_tab}]
+    [text::hidden_fields [segments::fields_to_preserve]]
+    
+    [look::dialogbox_buttons [subst {[security::triggered_feature_disclaimer]<input [translation::inputTagSubmitImage "Insert"] name=\"insert-trigger-new-do\"> <input [translation::inputTagSubmitImage Cancel] name="cancel-trigger-new-do">}]]
+    [text::hidden_fields {sq viewtable_type}]
+</form>
+
+[htmltag::body_off][htmltag::html_off]
+[htmltag::standard_footer]
+

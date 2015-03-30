@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="MoneyMeidaDailyExporter">
+</Property><Property Name="Solution File" Value="C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\MoneyMeidaDailyExporter\MoneyMeidaDailyExporter.sln">
+</Property><Property Name="User Options File" Value="C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\MoneyMeidaDailyExporter\MoneyMeidaDailyExporter.suo">
+</Property><Property Name="Date" Value="Thursday, May 19, 2011">
+</Property><Property Name="Time" Value="23:03 PM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="MoneyMeidaDailyExporter.sln" Description="File successfully backed up as C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\MoneyMeidaDailyExporter\Backup\MoneyMeidaDailyExporter.sln">
+</Event><Event ErrorLevel="0" Project="" Source="MoneyMeidaDailyExporter.suo" Description="File successfully backed up as C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\MoneyMeidaDailyExporter\Backup\MoneyMeidaDailyExporter.suo">
+</Event><Event ErrorLevel="2" Project="MoneyMeidaDailyExporter" Source="MoneyMeidaDailyExporter\MoneyMeidaDailyExporter.csproj" Description="Unable to open project file to perform upgrade.  ">
+</Event><Event ErrorLevel="0" Project="" Source="MoneyMeidaDailyExporter.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="MoneyMeidaDailyExporter.sln" Description="Converted">
+</Event></UpgradeLog>

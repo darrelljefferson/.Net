@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HayhouseMonthlyReportGenerator", "HayhouseMonthlyReportGenerator.csproj", "{A7224715-F965-468A-AEA2-081D042C36FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7224715-F965-468A-AEA2-081D042C36FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7224715-F965-468A-AEA2-081D042C36FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7224715-F965-468A-AEA2-081D042C36FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7224715-F965-468A-AEA2-081D042C36FF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

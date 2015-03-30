@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="RailEuropeFileParser">
+</Property><Property Name="Solution File" Value="C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\RailEuropeFileParser\RailEuropeFileParser.sln">
+</Property><Property Name="Date" Value="Tuesday, May 31, 2011">
+</Property><Property Name="Time" Value="17:59:18 PM">
+</Property><Property Name="Log Number" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="RailEuropeFileParser" Source="RailEuropeFileParser.csproj" Description="Project file successfully backed up as C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\RailEuropeFileParser\Backup1\RailEuropeFileParser.csproj">
+</Event><Event ErrorLevel="0" Project="RailEuropeFileParser" Source="CsvParser.cs" Description="File successfully backed up as C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\RailEuropeFileParser\Backup1\CsvParser.cs">
+</Event><Event ErrorLevel="0" Project="RailEuropeFileParser" Source="Ftp.cs" Description="File successfully backed up as C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\RailEuropeFileParser\Backup1\Ftp.cs">
+</Event><Event ErrorLevel="0" Project="RailEuropeFileParser" Source="Log.cs" Description="File successfully backed up as C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\RailEuropeFileParser\Backup1\Log.cs">
+</Event><Event ErrorLevel="0" Project="RailEuropeFileParser" Source="Program.cs" Description="File successfully backed up as C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\RailEuropeFileParser\Backup1\Program.cs">
+</Event><Event ErrorLevel="0" Project="RailEuropeFileParser" Source="Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\RailEuropeFileParser\Backup1\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="RailEuropeFileParser" Source="SendEmail.cs" Description="File successfully backed up as C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\RailEuropeFileParser\Backup1\SendEmail.cs">
+</Event><Event ErrorLevel="0" Project="RailEuropeFileParser" Source="RailEuropeFileParser.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="RailEuropeFileParser" Source="RailEuropeFileParser.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="RailEuropeFileParser" Source="RailEuropeFileParser.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

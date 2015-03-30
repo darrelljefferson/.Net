@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="PheaaDailyImporterUploader">
+</Property><Property Name="Solution File" Value="Z:\PUBLIC\PheaaDailyImporterUploader\PheaaDailyImporterUploader.sln">
+</Property><Property Name="User Options File" Value="Z:\PUBLIC\PheaaDailyImporterUploader\PheaaDailyImporterUploader.suo">
+</Property><Property Name="Date" Value="Monday, May 16, 2011">
+</Property><Property Name="Time" Value="10:30 AM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="PheaaDailyImporterUploader.sln" Description="File successfully backed up as Z:\PUBLIC\PheaaDailyImporterUploader\Backup\PheaaDailyImporterUploader.sln">
+</Event><Event ErrorLevel="0" Project="" Source="PheaaDailyImporterUploader.suo" Description="File successfully backed up as Z:\PUBLIC\PheaaDailyImporterUploader\Backup\PheaaDailyImporterUploader.suo">
+</Event><Event ErrorLevel="0" Project="PheaaDailyImporterUploader" Source="PheaaDailyImporterUploader\PheaaDailyImporterUploader.csproj" Description="Project file successfully backed up as Z:\PUBLIC\PheaaDailyImporterUploader\Backup\PheaaDailyImporterUploader\PheaaDailyImporterUploader.csproj">
+</Event><Event ErrorLevel="0" Project="PheaaDailyImporterUploader" Source="PheaaDailyImporterUploader\Log.cs" Description="File successfully backed up as Z:\PUBLIC\PheaaDailyImporterUploader\Backup\PheaaDailyImporterUploader\Log.cs">
+</Event><Event ErrorLevel="0" Project="PheaaDailyImporterUploader" Source="PheaaDailyImporterUploader\Program.cs" Description="File successfully backed up as Z:\PUBLIC\PheaaDailyImporterUploader\Backup\PheaaDailyImporterUploader\Program.cs">
+</Event><Event ErrorLevel="0" Project="PheaaDailyImporterUploader" Source="PheaaDailyImporterUploader\Properties\AssemblyInfo.cs" Description="File successfully backed up as Z:\PUBLIC\PheaaDailyImporterUploader\Backup\PheaaDailyImporterUploader\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="PheaaDailyImporterUploader" Source="PheaaDailyImporterUploader\SFTP.cs" Description="File successfully backed up as Z:\PUBLIC\PheaaDailyImporterUploader\Backup\PheaaDailyImporterUploader\SFTP.cs">
+</Event><Event ErrorLevel="0" Project="PheaaDailyImporterUploader" Source="PheaaDailyImporterUploader\Utility.cs" Description="File successfully backed up as Z:\PUBLIC\PheaaDailyImporterUploader\Backup\PheaaDailyImporterUploader\Utility.cs">
+</Event><Event ErrorLevel="0" Project="PheaaDailyImporterUploader" Source="PheaaDailyImporterUploader\PheaaDailyImporterUploader.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="PheaaDailyImporterUploader" Source="PheaaDailyImporterUploader\PheaaDailyImporterUploader.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="PheaaDailyImporterUploader.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="PheaaDailyImporterUploader.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="PheaaDailyImporterUploader" Source="PheaaDailyImporterUploader\PheaaDailyImporterUploader.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

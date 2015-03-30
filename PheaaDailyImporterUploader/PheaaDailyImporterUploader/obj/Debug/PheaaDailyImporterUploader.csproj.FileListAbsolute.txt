@@ -1,0 +1,6 @@
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\PheaaDailyImporterUploader\PheaaDailyImporterUploader\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\PheaaDailyImporterUploader\PheaaDailyImporterUploader\bin\Debug\PheaaDailyImporterUploader.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\PheaaDailyImporterUploader\PheaaDailyImporterUploader\bin\Debug\PheaaDailyImporterUploader.pdb
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\PheaaDailyImporterUploader\PheaaDailyImporterUploader\bin\Debug\ChilkatDotNet2.dll
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\PheaaDailyImporterUploader\PheaaDailyImporterUploader\obj\Debug\PheaaDailyImporterUploader.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\PheaaDailyImporterUploader\PheaaDailyImporterUploader\obj\Debug\PheaaDailyImporterUploader.pdb

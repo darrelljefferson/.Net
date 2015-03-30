@@ -1,0 +1,18 @@
+[if { ![security::is_allowed_to_admin_this_subset_id [ncgi::value id [ncgi::value key_field_value 0]]] } { 
+    look::redirect_to_message_page "" "Sorry" "utilities" "[translation::text {You do not have permission to edit this segment:}] [ncgi::value id [ncgi::value key_field_value 0]]"
+}]
+[htmltag::standard_header]
+
+<form action="insert_conditions.tml?[lmcgi::clist_url]" method="post">
+    [text::hidden_fields {viewtable_type sq}]
+
+    [::segments::insert_conditions]
+    
+    [text::hidden_fields {page type current_tab}]
+    [text::hidden_fields [segments::fields_to_preserve]]
+    
+    [look::dialogbox_buttons [subst {<input [translation::inputTagSubmitImage "Insert"] name=\"insert-condition-new-do\"> <input [translation::inputTagSubmitImage Cancel] name="cancel-condition-new-do">}]]
+</form>
+
+[htmltag::standard_footer]
+

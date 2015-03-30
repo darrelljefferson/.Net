@@ -1,0 +1,18 @@
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\RailEuropeFileParser\RailEuropeFileParser\bin\Debug\RailEuropeFileParser.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\RailEuropeFileParser\RailEuropeFileParser\bin\Debug\RailEuropeFileParser.pdb
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\RailEuropeFileParser\RailEuropeFileParser\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\RailEuropeFileParser\RailEuropeFileParser\obj\Debug\RailEuropeFileParser.exe
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\RailEuropeFileParser\RailEuropeFileParser\obj\Debug\RailEuropeFileParser.pdb
+C:\Documents and Settings\bmueller\My Documents\Visual Studio 2008\Projects\RailEuropeFileParser\RailEuropeFileParser\bin\Debug\ChilkatDotNet2.dll
+Z:\PUBLIC\RailEuropeFileParser\obj\Debug\RailEuropeFileParser.exe
+Z:\PUBLIC\RailEuropeFileParser\obj\Debug\RailEuropeFileParser.pdb
+Z:\PUBLIC\RailEuropeFileParser\bin\Debug\RailEuropeFileParser.exe
+Z:\PUBLIC\RailEuropeFileParser\bin\Debug\RailEuropeFileParser.pdb
+Z:\PUBLIC\RailEuropeFileParser\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\RailEuropeFileParser\obj\Debug\RailEuropeFileParser.exe
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\RailEuropeFileParser\obj\Debug\RailEuropeFileParser.pdb
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\RailEuropeFileParser\bin\Debug\RailEuropeFileParser.exe
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\RailEuropeFileParser\bin\Debug\RailEuropeFileParser.pdb
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\RailEuropeFileParser\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\RailEuropeFileParser\bin\Debug\RailEuropeFileParser.exe.config
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\RailEuropeFileParser\bin\Debug\EmailTracker.sdf

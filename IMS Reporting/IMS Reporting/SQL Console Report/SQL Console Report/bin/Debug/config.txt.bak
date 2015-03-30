@@ -1,0 +1,11 @@
+//SQL ODBC String
+//Server=JILL-TOWER\SQLEXPRESS; Database=lm10_2a; User Id=sa; Password=dustin; Connect Timeout=500
+Server=db12.hosting.lyris.net; Database=ims; User Id=ims; Password=718ims817; Connect Timeout=500;
+//FTP URL
+ftp://Lyris:LyRi$159@ftp.ims.ca
+//FTP Username
+Lyris
+//FTP Password
+LyRi$159
+//CSV demographics
+member.List_,member.MemberType_,member.Address_1_,member.Address_2_,member.address_3_,member.Age_,member.Birthday_,member.city_,member.Company_Name_,member.Company_Type_,member.Company_URL_,member.Country_,member.Download_Date_,member.Education_,member.fax_,member.Field_10_,member.Field_1_,member.Field_2_,member.Field_3_,member.Field_4_,member.Field_5_,member.Field_6_,member.Field_7_,member.Field_8_,member.Field_9_,member.First_Name_,member.Gender_,member.Income_,member.Interests_,member.Last_Name_,member.Marital_Status_,member.Number_Employees_,member.Number_of_Children_,member.Occupation_,member.Phone_Home_,member.Phone_Office_,member.Postal_Code_,member.Product_,member.State_Province_

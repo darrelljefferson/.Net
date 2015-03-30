@@ -1,0 +1,5 @@
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\MultiTaskApp\MultiTaskApp\bin\Debug\MultiTaskApp.exe
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\MultiTaskApp\MultiTaskApp\bin\Debug\MultiTaskApp.pdb
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\MultiTaskApp\MultiTaskApp\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\MultiTaskApp\MultiTaskApp\obj\x86\Debug\MultiTaskApp.exe
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\MultiTaskApp\MultiTaskApp\obj\x86\Debug\MultiTaskApp.pdb

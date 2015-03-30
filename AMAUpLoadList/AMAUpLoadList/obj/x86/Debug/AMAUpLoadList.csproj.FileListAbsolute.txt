@@ -1,0 +1,10 @@
+c:\documents and settings\djefferson\my documents\visual studio 2010\Projects\AMAUpLoadList\AMAUpLoadList\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\AMAUpLoadList\AMAUpLoadList\bin\Debug\AMAUpLoadList.exe.config
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\AMAUpLoadList\AMAUpLoadList\bin\Debug\AMAUpLoadList.exe
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\AMAUpLoadList\AMAUpLoadList\bin\Debug\AMAUpLoadList.pdb
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\AMAUpLoadList\AMAUpLoadList\bin\Debug\ChilkatDotNet2.dll
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\AMAUpLoadList\AMAUpLoadList\obj\x86\Debug\AMAUpLoadList.exe
+C:\Documents and Settings\djefferson\My Documents\Visual Studio 2010\Projects\AMAUpLoadList\AMAUpLoadList\obj\x86\Debug\AMAUpLoadList.pdb
+E:\Projects\AMAUpLoadList\AMAUpLoadList\bin\Debug\AMAUpLoadList.exe.config
+E:\Projects\AMAUpLoadList\AMAUpLoadList\obj\x86\Debug\AMAUpLoadList.exe
+E:\Projects\AMAUpLoadList\AMAUpLoadList\obj\x86\Debug\AMAUpLoadList.pdb
